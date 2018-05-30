@@ -24,6 +24,6 @@ header {
 }
 
 /* About */
-section.about-me {
+section#about-me {
 	padding: 10em 0;
 }
