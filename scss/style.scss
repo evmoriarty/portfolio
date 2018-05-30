@@ -1,5 +1,24 @@
 // Lato - Google Font
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+// Open Sans - Google Font (used for buttons)
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+// Variables
+$h1_font: 96px;
+$h2_font: 60px;
+$h3_font: 48px;
+$h4_font: 34px;
+$h5_font: 24px;
+$h6_font: 20px;
+$body1_font: 16px;
+$body2_font: 14px;
+
+$primary_button_color: #A30000;
+
+$primary_opacity: 1;
+$secondary_opacity: 0.7;
+$disabled_opacity: 0.3;
+
 
 body {
 	font-family: 'Lato', sans-serif;
@@ -10,13 +29,18 @@ nav.navbar {
 	position: absolute;
 }
 
+.navbar ul li a {
+	font-size: $body1_font;
+}
+
 /* Header */
 header {
 	display: flex!important;
 	flex-direction: column;
 	justify-content: center;
 	height: 100vh;
-	background: linear-gradient(#373747, #272737);
+	background: #222 url("../img/rsz_unsplash1.jpg") no-repeat center;
+    background-size: cover;
 }
 
 .header-content {
@@ -25,7 +49,27 @@ header {
 	align-items: center;
 }
 
+.header-content h1 {
+	font-size: $h1_font;
+	font-weight: 400;
+	letter-spacing: -4px;
+}
+
+.header-content h5 {
+	font-size: $h5_font;
+	font-weight: 400;
+	opacity: 0.7;
+}
+
 /* About */
 section#about-me {
+	background: #120F0F;
 	padding: 10em 0;
+}
+
+#about-me h4 {
+	color: #FFF;
+	opacity: $secondary_opacity;
+	font-size: $h4_font;
+	line-height: 120%;
 }

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
 body {
   font-family: 'Lato', sans-serif; }
 
@@ -6,21 +7,42 @@ body {
 nav.navbar {
   position: absolute; }
 
+.navbar ul li a {
+  font-size: 16px; }
+
 /* Header */
 header {
   display: flex !important;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(#373747, #272737); }
+  background: #222 url("../img/rsz_unsplash1.jpg") no-repeat center;
+  background-size: cover; }
 
 .header-content {
   display: flex;
   flex-direction: column;
   align-items: center; }
 
+.header-content h1 {
+  font-size: 96px;
+  font-weight: 400;
+  letter-spacing: -4px; }
+
+.header-content h5 {
+  font-size: 24px;
+  font-weight: 400;
+  opacity: 0.7; }
+
 /* About */
 section#about-me {
+  background: #120F0F;
   padding: 10em 0; }
+
+#about-me h4 {
+  color: #FFF;
+  opacity: 0.7;
+  font-size: 34px;
+  line-height: 120%; }
 
 /*# sourceMappingURL=style.css.map */
