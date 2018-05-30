@@ -32,6 +32,12 @@ nav.navbar {
 	padding: 1rem;
 }
 
+.navbar-collapse.show {
+	border-left: 1px solid rgba(0,0,0,.1);
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	border-right: 1px solid rgba(0,0,0,.1);
+}
+
 .navbar .navbar-brand a {
 	// font-size: $h6_font;
 	color: #000;
@@ -115,3 +121,46 @@ header {
 // 	font-size: $h4_font;
 // 	line-height: 120%;
 // }
+
+
+/* XS Devices */
+@media (max-width: 576px) {
+	.header-content h2 {
+		font-size: $h5_font;
+	}
+	
+	.header-content h3 {
+		font-size: $h6_font;
+	}
+}
+
+
+/* Small devices */
+@media (min-width: 576px) {
+	.header-content h2 {
+		font-size: $h4_font;
+	}
+	
+	.header-content h3 {
+		font-size: $h5_font;
+	}
+}
+
+/* Medium devices */
+@media (min-width: 768px) {
+}
+
+/* Large devices */
+@media (min-width: 992px) {
+	.header-content h2 {
+		font-size: 2rem;
+	}
+	
+	.header-content h3 {
+		font-size: 1.75rem;
+	}
+}
+
+/* Extra large devices */
+@media (min-width: 1200px) {
+}

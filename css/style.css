@@ -9,6 +9,11 @@ nav.navbar {
   position: absolute;
   padding: 1rem; }
 
+.navbar-collapse.show {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1); }
+
 .navbar .navbar-brand a {
   color: #000;
   opacity: 0.54; }
@@ -64,5 +69,28 @@ header {
   text-decoration: underline; }
 
 /* About */
+/* XS Devices */
+@media (max-width: 576px) {
+  .header-content h2 {
+    font-size: 24px; }
+
+  .header-content h3 {
+    font-size: 20px; } }
+/* Small devices */
+@media (min-width: 576px) {
+  .header-content h2 {
+    font-size: 34px; }
+
+  .header-content h3 {
+    font-size: 24px; } }
+/* Medium devices */
+/* Large devices */
+@media (min-width: 992px) {
+  .header-content h2 {
+    font-size: 2rem; }
+
+  .header-content h3 {
+    font-size: 1.75rem; } }
+/* Extra large devices */
 
 /*# sourceMappingURL=style.css.map */
