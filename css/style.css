@@ -1,74 +1,83 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400");
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+html {
+  font-family: Lato, sans-serif;
+  font-weight: 300; }
+
 body {
-  font-family: 'Lato', sans-serif; }
+  width: 60%;
+  margin: auto; }
+
+h1 {
+  font-size: 96px;
+  font-weight: 300;
+  letter-spacing: -1.5px; }
+
+h2 {
+  font-size: 60px;
+  font-weight: 300;
+  letter-spacing: -0.5px; }
+
+h3 {
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 0px; }
+
+h4 {
+  font-size: 34px;
+  font-weight: 400;
+  letter-spacing: 0.25px; }
+
+h5 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0px; }
+
+h6 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.15px; }
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.5px; }
 
 /* Navbar */
-nav.navbar {
-  width: 100%;
-  position: absolute;
-  padding: 1rem; }
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 0; }
 
-.navbar-collapse.show {
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  border-right: 1px solid rgba(0, 0, 0, 0.1); }
-
-.navbar .navbar-brand a {
-  color: #000;
-  opacity: 0.54; }
-
-.navbar .navbar-brand a:hover {
-  animation: showColor 0.1s ease-in-out forwards;
-  text-decoration: none; }
-
-.navbar .navbar-brand h5 {
-  color: #000;
-  opacity: 0.15; }
-
-.navbar ul li {
-  padding: 0 12px; }
-
-.navbar ul li a {
-  color: #000;
-  opacity: 0.54; }
-
-.navbar ul li a:hover {
-  animation: showColor 0.1s ease-in-out forwards; }
-
-@keyframes showColor {
-  from {
-    color: #000; }
-  to {
-    color: #D45249; } }
 /* Header */
 header {
-  display: flex !important;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-  background: #EEE;
-  background-size: cover; }
-
-.header-content {
   display: flex;
-  flex-direction: column; }
+  justify-content: center; }
 
-.header-content h2 {
-  font-weight: 400;
-  opacity: 0.87;
-  line-height: 175%; }
+header .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
-.header-content h3 {
-  font-weight: 300;
-  opacity: 0.54;
-  line-height: 150%; }
+header span {
+  color: #999; }
 
-.header-content a {
-  color: #D45249;
-  text-decoration: underline; }
+header h4 {
+  padding: 17px 0; }
 
-/* About */
+header img {
+  width: 600px;
+  height: auto; }
+
 /* XS Devices */
 @media (max-width: 576px) {
   .header-content h2 {

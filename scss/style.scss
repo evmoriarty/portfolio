@@ -1,17 +1,30 @@
 // Lato - Google Font
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
-// Open Sans - Google Font (used for buttons)
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 
 // Variables
-$h1_font: 96px;
-$h2_font: 60px;
-$h3_font: 48px;
-$h4_font: 34px;
-$h5_font: 24px;
-$h6_font: 20px;
-$body1_font: 16px;
-$body2_font: 14px;
+$h1_font-size: 96px;
+$h2_font-size: 60px;
+$h3_font-size: 48px;
+$h4_font-size: 34px;
+$h5_font-size: 24px;
+$h6_font-size: 20px;
+$body_font-size: 16px;
+
+$h1_font-weight: 300;
+$h2_font-weight: 300;
+$h3_font-weight: 400;
+$h4_font-weight: 400;
+$h5_font-weight: 400;
+$h6_font-weight: 700;
+$body_font-weight: 400;
+
+$h1_letter-spacing: -1.5px;
+$h2_letter-spacing: -0.5px;
+$h3_letter-spacing: 0px;
+$h4_letter-spacing: 0.25px;
+$h5_letter-spacing: 0px;
+$h6_letter-spacing: 0.15px;
+$body_letter-spacing: 0.5px;
 
 $primary_button_color: #A30000;
 $link_color: #D45249;
@@ -21,128 +34,122 @@ $secondary_opacity: 0.54;
 $disabled_opacity: 0.38;
 
 
+/* Global */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+html {
+	font-family: Lato, sans-serif;
+	font-weight: 300;
+}
+
 body {
-	font-family: 'Lato', sans-serif;
+	width: 60%;
+	margin: auto;
+}
+
+h1 {
+	font-size: $h1_font-size;
+	font-weight: $h1_font-weight;
+	letter-spacing: $h1_letter-spacing
+}
+
+h2 {
+	font-size: $h2_font-size;
+	font-weight: $h2_font-weight;
+	letter-spacing: $h2_letter-spacing
+}
+
+h3 {
+	font-size: $h3_font-size;
+	font-weight: $h3_font-weight;
+	letter-spacing: $h3_letter-spacing
+}
+
+h4 {
+	font-size: $h4_font-size;
+	font-weight: $h4_font-weight;
+	letter-spacing: $h4_letter-spacing
+}
+
+h5 {
+	font-size: $h5_font-size;
+	font-weight: $h5_font-weight;
+	letter-spacing: $h5_letter-spacing
+}
+
+h6 {
+	font-size: $h6_font-size;
+	font-weight: $h6_font-weight;
+	letter-spacing: $h6_letter-spacing
+}
+
+p {
+	font-size: $body_font-size;
+	font-weight: $body_font-weight;
+	letter-spacing: $body_letter-spacing
 }
 
 /* Navbar */
-nav.navbar {
-	width: 100%;
-	position: absolute;
-	padding: 1rem;
-}
-
-.navbar-collapse.show {
-	border-left: 1px solid rgba(0,0,0,.1);
-	border-bottom: 1px solid rgba(0,0,0,.1);
-	border-right: 1px solid rgba(0,0,0,.1);
-}
-
-.navbar .navbar-brand a {
-	// font-size: $h6_font;
-	color: #000;
-	opacity: $secondary_opacity;
-}
-
-.navbar .navbar-brand a:hover {
-	animation: showColor 0.1s ease-in-out forwards;
-	text-decoration: none;
-}
-
-.navbar .navbar-brand h5 {
-	// font-size: $h6_font;
-	color: #000;
-	opacity: 0.15;
-}
-
-.navbar ul li {
-	padding: 0 12px;
-}
-
-.navbar ul li a {
-	// font-size: $h6_font;
-	color: #000;
-	opacity: $secondary_opacity;
-}
-
-.navbar ul li a:hover {
-	animation: showColor 0.1s ease-in-out forwards;
-}
-
-@keyframes showColor {
-	from {color: #000;}
-	to {color: $link_color;}
+nav {
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px 0;
 }
 
 
 /* Header */
 header {
-	display: flex!important;
-	flex-direction: column;
+	display: flex;
 	justify-content: center;
-	height: 100vh;
-	background: #EEE;
-    background-size: cover;
 }
 
-.header-content {
+header .text {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 }
 
-.header-content h2 {
-// font-size: $h3_font;
-	font-weight: 400;
-	opacity: $primary_opacity;
-	line-height: 175%;
+header span {
+	color: #999;
 }
 
-.header-content h3 {
-	// font-size: $h4_font;
-	font-weight: 300;
-	opacity: $secondary_opacity;
-	line-height: 150%;
+header h4 {
+	padding: 17px 0;
 }
 
-.header-content a {
-	color: $link_color;
-	text-decoration: underline;
+header img {
+	width: 600px;
+	height: auto;
 }
-
-/* About */
-// section#about-me {
-// 	background: #120F0F;
-// 	padding: 10em 0;
-// }
-
-// #about-me h4 {
-// 	color: #FFF;
-// 	opacity: $secondary_opacity;
-// 	font-size: $h4_font;
-// 	line-height: 120%;
-// }
 
 
 /* XS Devices */
 @media (max-width: 576px) {
 	.header-content h2 {
-		font-size: $h5_font;
+		font-size: $h5_font-size;
 	}
 	
 	.header-content h3 {
-		font-size: $h6_font;
+		font-size: $h6_font-size;
 	}
 }
-
 
 /* Small devices */
 @media (min-width: 576px) {
 	.header-content h2 {
-		font-size: $h4_font;
+		font-size: $h4_font-size;
 	}
 	
 	.header-content h3 {
-		font-size: $h5_font;
+		font-size: $h5_font-size;
 	}
 }
 
