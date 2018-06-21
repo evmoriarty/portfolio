@@ -51,25 +51,55 @@
 
     <section id="my-works">
         <div class="container">
-            <div class="image-left"></div>
-            <div class="image-right"></div>
+            <div class="row">
+                <div class="image-left" onmouseover="spin()">
+                    <a href="#">
+                        <img src="./img/gray-img.jpg" alt="gray-image">
+                    </a>
+                </div>
+                <div class="image-right">
+                    <a href="#">
+                        <img src="./img/gray-img.jpg" alt="gray-image">
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="image-left">
+                    <a href="#">
+                        <img src="./img/gray-img.jpg" alt="gray-image">
+                    </a>
+                </div>
+                <div class="image-right">
+                    <a href="#">
+                        <img src="./img/gray-img.jpg" alt="gray-image">
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <ul class="links">
-                <li><a href="#">GitHub</a></li>
-                <li><a href="#">LinkedIn</a></li>
-                <li><a href="#">Email</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Facebook</a></li>
-            </ul>
+            <div class="links">
+                <ul class="list">
+                    <li><a href="https://github.com/SrgSprinkles/portfolio" target="_blank">GitHub</a></li>
+                    <li><a href="https://linkedin.com/in/evan-pringle/" target="_blank">LinkedIn</a></li>
+                    <li><a href="mailto:evan.pringle1@gmail.com">Email</a></li>
+                    <li><a href="https://twitter.com/epringle365" target="_blank">Twitter</a></li>
+                    <li><a href="https://facebook.com/epringle7" target="_blank">Facebook</a></li>
+                </ul>
+            </div>
             <div class="copyright">
                 <p>&copy;Evan Pringle 2018</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        $(document).ready(spin() {
+            alert('hover');
+        });
+    </script>
 
 
 
