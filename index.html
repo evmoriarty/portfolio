@@ -20,7 +20,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="preload">
 
     <nav>
         <a href="#"><img src="img/circuit_menu.svg" alt="circuit_menu"></a>
@@ -52,26 +52,21 @@
     <section id="my-works">
         <div class="container">
             <div class="row">
-                <div class="image-left" onmouseover="spin()">
+                <div class="image">
                     <a href="#">
-                        <img src="./img/gray-img.jpg" alt="gray-image">
+                        <img src="./img/northlich.svg" alt="northlich_webpage">
                     </a>
                 </div>
-                <div class="image-right">
+                <div class="image">
                     <a href="#">
-                        <img src="./img/gray-img.jpg" alt="gray-image">
+                        <img src="./img/engel-and-martin.svg" alt="engel-and-martin_webpage">
                     </a>
                 </div>
             </div>
             <div class="row">
-                <div class="image-left">
+                <div class="image image-full">
                     <a href="#">
-                        <img src="./img/gray-img.jpg" alt="gray-image">
-                    </a>
-                </div>
-                <div class="image-right">
-                    <a href="#">
-                        <img src="./img/gray-img.jpg" alt="gray-image">
+                        <img src="./img/cyber@uc.svg" alt="cyber@uc_webpage">
                     </a>
                 </div>
             </div>
@@ -80,30 +75,49 @@
 
     <footer>
         <div class="container">
+            <div class="contact">
+                <h5 class="contact-container">Want to get in <a href="mailto:evan.pringle1@gmail.com">touch</a>?</h5>
+            </div>
             <div class="links">
                 <ul class="list">
-                    <li><a href="https://github.com/SrgSprinkles/portfolio" target="_blank">GitHub</a></li>
-                    <li><a href="https://linkedin.com/in/evan-pringle/" target="_blank">LinkedIn</a></li>
-                    <li><a href="mailto:evan.pringle1@gmail.com">Email</a></li>
-                    <li><a href="https://twitter.com/epringle365" target="_blank">Twitter</a></li>
-                    <li><a href="https://facebook.com/epringle7" target="_blank">Facebook</a></li>
+                    <li><a href="https://github.com/SrgSprinkles/portfolio" target="_blank"><p>GitHub</p></a></li>
+                    <li><a href="https://linkedin.com/in/evan-pringle/" target="_blank"><p>LinkedIn</p></a></li>
+                    <li><a href="https://twitter.com/epringle365" target="_blank"><p>Twitter</p></a></li>
+                    <li><a href="https://instagram.com/epringle365" target="_blank"><p>Instagram</p></a></li>
+                    <li><a href="https://facebook.com/epringle7" target="_blank"><p>Facebook</p></a></li>
                 </ul>
             </div>
             <div class="copyright">
-                <p>&copy;Evan Pringle 2018</p>
+                <p>Made with love by Evan Pringle</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        $(document).ready(spin() {
-            alert('hover');
-        });
-    </script>
 
 
 
     <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+    <script>
+       setTimeout(function(){
+            document.body.className="";
+        },500);
+    </script>
+
+    <script>
+        $('footer a').hover(
+            function() {
+                $(this).removeClass('hover-off');
+                $(this).addClass('hover-on');
+            }, function() {
+                $(this).removeClass('hover-on');
+                $(this).addClass('hover-off');
+            }
+        );
+    </script>
+
 </body>
 </html>
