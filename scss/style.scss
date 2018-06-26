@@ -108,6 +108,11 @@ p {
 
 a {
 	text-decoration: none;
+	color: black;
+}
+
+section {
+	padding: $section_padding;
 }
 
 
@@ -195,11 +200,6 @@ header img {
 
 
 /******* My-Works *******/
-#my-works,
-#my-contact {
-	padding: $section_padding;
-}
-
 #my-works .row {
 	display: flex;
 	justify-content: space-around;
@@ -335,6 +335,11 @@ footer .copyright p {
 	padding-top: 30px;
 }
 
+/******* Northlich Page ********/
+.works-expanded img {
+	width: 100%;
+	height: 600px;
+}
 
 
 /******* Media Queries *******/

@@ -60,7 +60,11 @@ p {
   letter-spacing: 0.5px; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: black; }
+
+section {
+  padding: 100px 0px; }
 
 /******* Navbar *******/
 nav {
@@ -131,10 +135,6 @@ header img {
   mask-image: linear-gradient(to top, transparent 5%, black 50%); }
 
 /******* My-Works *******/
-#my-works,
-#my-contact {
-  padding: 100px 0px; }
-
 #my-works .row {
   display: flex;
   justify-content: space-around; }
@@ -240,6 +240,11 @@ footer .links a::after {
 footer .copyright p {
   text-align: center;
   padding-top: 30px; }
+
+/******* Northlich Page ********/
+.works-expanded img {
+  width: 100%;
+  height: 600px; }
 
 /******* Media Queries *******/
 /* XS Devices */
