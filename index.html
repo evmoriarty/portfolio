@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102150305-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -22,102 +22,82 @@
 
 <body class="preload">
 
-    <nav>
-        <a href="#"><img src="img/circuit_menu.svg" alt="circuit_menu"></a>
-    </nav>
+    <div id="sideNav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="img/close.svg" class="closebtn-img" alt="close_btn"></a>
+        <a href="./index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
 
-    <header>
-        <div class="text">
-            <h4>EVAN PRINGLE <span>&middot; Cincinnati</span></h4>
-            <h5>A self-taught web developer with a passion to make the internet fascinating.</h5>
-        </div>
-        <div class="image">
-            <img src="img/circuit_tree.png" alt="circuit_tree">
-        </div>
-    </header>
-
-    <!-- <section id="about-me">
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <h4>Getting started in <b>web development</b> is the best thing I’ve done. Ever since the web started, it continuosly grows. It’s helped businesses grow, used for entertainment, and a great resource of knowledge.</h4>
-                </div>
-                <div class="col-6">
-                    <h2>about me</h2>
-                </div>
+    
+    <div id="main-content">
+        <nav>
+            <a href="#" onclick="openNav()"><img src="img/circuit_menu.svg" alt="circuit_menu"></a>
+        </nav>
+    
+        <header>
+            <div class="text">
+                <h4>EVAN PRINGLE <span>&middot; Cincinnati</span></h4>
+                <h5>A self-taught web developer with a passion to make the internet fascinating.</h5>
             </div>
-        </div>
-    </section> -->
-
-    <section id="my-works">
-        <div class="container">
-            <div class="row">
-                <div class="image">
-                    <a href="#">
-                        <img src="./img/northlich.svg" alt="northlich_webpage">
-                    </a>
-                </div>
-                <div class="image">
-                    <a href="#">
-                        <img src="./img/engel-and-martin.svg" alt="engel-and-martin_webpage">
-                    </a>
-                </div>
+            <div class="image">
+                <img src="img/circuit_tree.png" alt="circuit_tree">
             </div>
-            <div class="row">
-                <div class="image image-full">
-                    <a href="#">
-                        <img src="./img/cyber@uc.svg" alt="cyber@uc_webpage">
-                    </a>
+        </header>
+
+        <section id="my-works">
+            <div class="container">
+                <div class="row">
+                    <div class="image">
+                        <a href="#">
+                            <img src="./img/northlich.svg" alt="northlich_webpage">
+                        </a>
+                    </div>
+                    <div class="image">
+                        <a href="#">
+                            <img src="./img/engel-and-martin.svg" alt="engel-and-martin_webpage">
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="image image-full">
+                        <a href="#">
+                            <img src="./img/cyber@uc.svg" alt="cyber@uc_webpage">
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="contact">
-                <h5 class="contact-container">Want to get in <a href="mailto:evan.pringle1@gmail.com">touch</a>?</h5>
+        </section>
+    
+        <footer>
+            <div class="container">
+                <div class="contact">
+                    <h5 class="contact-container">Want to get in <a href="mailto:evan.pringle1@gmail.com">touch</a>?</h5>
+                </div>
+                <div class="links">
+                    <ul class="list">
+                        <li><a href="https://github.com/SrgSprinkles/portfolio" target="_blank"><p>GitHub</p></a></li>
+                        <li><a href="https://linkedin.com/in/evan-pringle/" target="_blank"><p>LinkedIn</p></a></li>
+                        <li><a href="https://twitter.com/epringle365" target="_blank"><p>Twitter</p></a></li>
+                        <li><a href="https://instagram.com/epringle365" target="_blank"><p>Instagram</p></a></li>
+                        <li><a href="https://facebook.com/epringle7" target="_blank"><p>Facebook</p></a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <p>Made with love by Evan Pringle</p>
+                </div>
             </div>
-            <div class="links">
-                <ul class="list">
-                    <li><a href="https://github.com/SrgSprinkles/portfolio" target="_blank"><p>GitHub</p></a></li>
-                    <li><a href="https://linkedin.com/in/evan-pringle/" target="_blank"><p>LinkedIn</p></a></li>
-                    <li><a href="https://twitter.com/epringle365" target="_blank"><p>Twitter</p></a></li>
-                    <li><a href="https://instagram.com/epringle365" target="_blank"><p>Instagram</p></a></li>
-                    <li><a href="https://facebook.com/epringle7" target="_blank"><p>Facebook</p></a></li>
-                </ul>
-            </div>
-            <div class="copyright">
-                <p>Made with love by Evan Pringle</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
+
+    </div>
 
 
-
-
-    <!-- Bootstrap JS -->
+    <!-- jQuery v3.3.1 -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
 
-    <script>
-       setTimeout(function(){
-            document.body.className="";
-        },500);
-    </script>
-
-    <script>
-        $('footer a').hover(
-            function() {
-                $(this).removeClass('hover-off');
-                $(this).addClass('hover-on');
-            }, function() {
-                $(this).removeClass('hover-on');
-                $(this).addClass('hover-off');
-            }
-        );
-    </script>
+    <script src="./js/script.js"></script>
 
 </body>
 </html>

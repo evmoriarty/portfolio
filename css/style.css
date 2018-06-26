@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
-/* Global */
+/******* Global *******/
 * {
   margin: 0;
   padding: 0;
@@ -14,13 +14,15 @@ html {
   font-weight: 300; }
 
 body {
-  width: 90%;
-  margin: auto; }
+  width: 85%;
+  margin: auto;
+  transition: 0.5s; }
 
 body.preload * {
   animation-duration: 0s !important;
   -webkit-animation-duration: 0s !important;
-  transition: background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s !important; }
+  transition: 0s !important;
+  -webkit-transition: 0s !important; }
 
 h1 {
   font-size: 96px;
@@ -60,13 +62,52 @@ p {
 a {
   text-decoration: none; }
 
-/* Navbar */
+/******* Navbar *******/
 nav {
   display: flex;
   justify-content: flex-end;
-  padding: 10px 0; }
+  padding: 15px 0; }
 
-/* Header */
+/******* SideNav *******/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding-top: 60px; }
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s; }
+
+.sidenav a:hover {
+  color: #f1f1f1; }
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px; }
+
+.sidenav .closebtn .closebtn-img {
+  width: 20px;
+  opacity: 0.4;
+  transition: 0.3s; }
+
+.sidenav .closebtn .closebtn-img:hover {
+  opacity: 1; }
+
+/******* Header *******/
 header {
   display: flex;
   justify-content: center; }
@@ -192,7 +233,7 @@ footer .links a::after {
   left: 0;
   bottom: -3px;
   height: 2px;
-  background-color: #D5D5D5;
+  background-color: #B5B5B5;
   transition: width 0.4s ease;
   -webkit-transition: width 0.4s ease; }
 
