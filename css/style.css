@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:300,400,700");
 /******* Global *******/
 * {
   margin: 0;
@@ -10,13 +10,8 @@
   background: transparent; }
 
 html {
-  font-family: Lato, sans-serif;
+  font-family: 'Encode Sans Condensed', sans-serif;
   font-weight: 300; }
-
-body {
-  width: 85%;
-  margin: auto;
-  transition: 0.5s; }
 
 body.preload * {
   animation-duration: 0s !important;
@@ -27,44 +22,150 @@ body.preload * {
 h1 {
   font-size: 96px;
   font-weight: 300;
-  letter-spacing: -1.5px; }
+  letter-spacing: -0.5px; }
 
 h2 {
   font-size: 60px;
   font-weight: 300;
-  letter-spacing: -0.5px; }
+  letter-spacing: 0.5px; }
 
 h3 {
   font-size: 48px;
   font-weight: 400;
-  letter-spacing: 0px; }
+  letter-spacing: 1px; }
 
 h4 {
   font-size: 34px;
   font-weight: 400;
-  letter-spacing: 0.25px; }
+  letter-spacing: 1.25px; }
 
 h5 {
   font-size: 24px;
   font-weight: 400;
-  letter-spacing: 0px; }
+  letter-spacing: 1px; }
 
 h6 {
   font-size: 20px;
   font-weight: 700;
-  letter-spacing: 0.15px; }
+  letter-spacing: 1.15px; }
 
 p {
   font-size: 16px;
   font-weight: 400;
-  letter-spacing: 0.5px; }
+  letter-spacing: 1.5px; }
 
 a {
   text-decoration: none;
   color: black; }
 
-section {
+.g-container {
+  width: 85%;
+  margin: auto; }
+
+.container-100 {
+  width: 100%;
+  margin: auto; }
+
+.padding-t-10 {
+  padding-top: 10px; }
+
+.padding-t-25 {
+  padding-top: 25px; }
+
+.padding-t-50 {
+  padding-top: 50px; }
+
+.padding-t-75 {
+  padding-top: 75px; }
+
+.padding-t-100 {
+  padding-top: 100px; }
+
+.padding-tb-10 {
+  padding: 10px 0px; }
+
+.padding-tb-25 {
+  padding: 25px 0px; }
+
+.padding-tb-50 {
+  padding: 50px 0px; }
+
+.padding-tb-75 {
+  padding: 75px 0px; }
+
+.padding-tb-100 {
   padding: 100px 0px; }
+
+.margin-tb-10 {
+  margin: 10px 0px; }
+
+.margin-tb-25 {
+  margin: 25px 0px; }
+
+.margin-tb-50 {
+  margin: 50px 0px; }
+
+.margin-tb-75 {
+  margin: 75px 0px; }
+
+.margin-tb-100 {
+  margin: 100px 0px; }
+
+.margin-lr-25 {
+  margin: 0px 25px; }
+
+.margin-lr-50 {
+  margin: 0px 50px; }
+
+.margin-lr-75 {
+  margin: 0px 75px; }
+
+.margin-lr-100 {
+  margin: 0px 100px; }
+
+.p-absolute {
+  position: absolute; }
+
+.p-fixed {
+  position: fixed; }
+
+.w-50 {
+  width: 50%; }
+
+.w-100 {
+  width: 100%; }
+
+.d-flex {
+  display: flex; }
+
+.d-flex-direction {
+  display: flex;
+  flex-direction: column; }
+
+.d-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.d-inline-block {
+  display: inline-block; }
+
+.d-hidden {
+  display: none; }
+
+.text-center {
+  text-align: center; }
+
+hr {
+  position: relative;
+  z-index: 1;
+  border: 0;
+  margin: 0;
+  height: 1px;
+  background-color: #E7EDF1;
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  overflow: visible; }
 
 /******* Navbar *******/
 nav {
@@ -94,7 +195,7 @@ nav {
   transition: 0.3s; }
 
 .sidenav a:hover {
-  color: #f1f1f1; }
+  color: #F1F1F1; }
 
 .sidenav .closebtn {
   position: absolute;
@@ -242,9 +343,24 @@ footer .copyright p {
   padding-top: 30px; }
 
 /******* Northlich Page ********/
-.works-expanded img {
+.works-image-main img,
+.works-image-sub img {
   width: 100%;
   height: 600px; }
+
+.works-image-more img {
+  height: 600px; }
+
+.works-showcase-end a div {
+  transition: all 0.3s ease;
+  background-color: #F9F9F9; }
+
+.works-showcase-end a:hover div {
+  background-color: black;
+  color: white; }
+
+.works-showcase-end a:hover .d-hidden {
+  display: block; }
 
 /******* Media Queries *******/
 /* XS Devices */
