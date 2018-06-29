@@ -21,12 +21,12 @@
 <body>
 	
 	<div class="g-container">
-		<nav>
-			<a class="p-fixed padding-t-10" href="./index.html"><h5>Close</h5></a>
-		</nav>
+		<div class="showcase_close-btn">
+			<a href="./index.html"><p>Close</p></a>
+		</div>
 		
-		<section class="works-image-main padding-t-50">
-			<img src="img/gray-img.jpg" alt="northlich_page">
+		<section class="works-image-main padding-t-100">
+			<img src="img/northlich.png" alt="northlich_page" class="bg-color-north obj-contain">
 		</section>
 	
 		<section class="works-showcase padding-t-100">
@@ -35,13 +35,15 @@
 					<h4>Northlich</h4>
 					<p class="padding-t-25">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud </p>
 				</div>
-				<div class="details w-50 margin-lr-100">
+				<div class="details w-25 margin-lr-100">
 					<p>Front End Developer</p>
 					<hr class="margin-tb-10">
-					<p class="padding-tb-10">Contractor Project</p>
+					<p class="padding-tb-10">Contract Project</p>
 					<hr class="margin-tb-10">
 					<p class="padding-tb-10">2017</p>
-					<a class="padding-t-25 d-inline-block" href="http://shsmd.northlich.com/" target="_blank">VISIT WEBSITE</a>
+					<div class="site-link">
+						<a class="padding-t-25 d-inline-block hover-off" href="http://shsmd.northlich.com/" target="_blank"><p>VISIT WEBSITE</p></a>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -49,24 +51,21 @@
 
 	<div class="container-100">
 		<section class="works-image-sub padding-t-100">
-			<img src="img/gray-img.jpg" alt="northlich_alt">
+			<img src="img/northlich_int-camp.png" alt="northlich_alt" class="bg-color-north obj-contain">
 		</section>
 	</div>
 
 	<div class="g-container">
 		<section class="works-image-more padding-t-50 d-flex">
-			<img class="w-50 margin-lr-25" src="img/gray-img.jpg" alt="northlich_alt_2">
-			<img class="w-50 margin-lr-25" src="img/gray-img.jpg" alt="northlich_alt_3">
+			<img class="w-50 margin-lr-25 bg-color-north-2" src="img/northlich_mobile-view.png" alt="northlich_alt_2">
+			<img class="w-50 margin-lr-25 bg-color-north-2" src="img/northlich_end.png" alt="northlich_alt_3">
 		</section>
 	</div>
 
 	<div class="works-showcase-end padding-t-100 d-flex-center text-center">
-		<a class="w-100" href="#">
-			<div class="next-showcase padding-tb-100">
-				<h5>Next Project</h5>
-				<h5>Engel And Martin, LLC.</h5>
-				<h4 class="d-hidden">>></h4>
-			</div>
+		<a class="w-100" href="./engelandmartin.html">
+			<h5 class="padding-t-75">Next Project</h5>
+			<h5 class="padding-b-75">Engel & Martin, LLC.</h5>
 		</a>
 	</div>
 
@@ -75,6 +74,10 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 	crossorigin="anonymous"></script>
+	<!-- Scroll Reveal -->
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+	<script src="js/script.js"></script>
+
 
 </body>
 </html>

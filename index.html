@@ -22,20 +22,20 @@
 <body class="preload">
 
     <div class="g-container">
-        <div id="sideNav" class="sidenav">
+        <!-- <div id="sideNav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="img/close.svg" class="closebtn-img" alt="close_btn"></a>
             <a href="./index.html">Home</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
-        </div>
+        </div> -->
     
         
         <div id="main-content">
-            <nav>
-                <a href="#" onclick="openNav()"><img src="img/circuit_menu.svg" alt="circuit_menu"></a>
-            </nav>
+            <!-- <nav class="d-flex padding-tb-25">
+                <a href="#" onclick="openNav()"><img class="sidenavMenu" src="img/circuit_menu.svg" alt="circuit_menu"></a>
+            </nav> -->
         
-            <header>
+            <header class="padding-t-50">
                 <div class="text">
                     <h4>EVAN PRINGLE <span>&middot; Cincinnati</span></h4>
                     <h5>A self-taught web developer with a passion to make the internet fascinating.</h5>
@@ -45,31 +45,22 @@
                 </div>
             </header>
     
-            <section id="my-works">
-                <div class="container">
-                    <div class="row">
-                        <div class="image">
-                            <a href="./northlich.html">
-                                <img src="./img/northlich.svg" alt="northlich_webpage">
-                            </a>
-                        </div>
-                        <div class="image">
-                            <a href="#">
-                                <img src="./img/engel-and-martin.svg" alt="engel-and-martin_webpage">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="image image-full">
-                            <a href="#">
-                                <img src="./img/cyber@uc.svg" alt="cyber@uc_webpage">
-                            </a>
-                        </div>
-                    </div>
+            <section class="d-flex land-imgs padding-t-25" id="row-50">
+                <div class="landing-image w-50 margin-lr-25">
+                    <img src="./img/northlich.png" alt="northlich_webpage" id="northlich" class="w-100 obj-cover">
+                </div>
+                <div class="landing-image w-50 margin-lr-25">
+                    <img src="./img/engelandmartin.png" alt="engel-and-martin_webpage" id="engelandmartin" class="w-100 obj-cover">
+                </div>
+            </section>
+
+            <section class="d-flex land-imgs padding-t-50" id="row-100">
+                <div class="landing-image w-100 margin-lr-25">
+                    <img src="./img/cyber@uc.png" alt="cyberatuc_webpage" id="cyberatuc" class="w-100 obj-cover">
                 </div>
             </section>
         
-            <footer>
+            <footer class="padding-t-100">
                 <div class="container">
                     <div class="contact">
                         <h5 class="contact-container">Want to get in <a href="mailto:evan.pringle1@gmail.com">touch</a>?</h5>
@@ -80,11 +71,10 @@
                             <li><a href="https://linkedin.com/in/evan-pringle/" target="_blank"><p>LinkedIn</p></a></li>
                             <li><a href="https://twitter.com/epringle365" target="_blank"><p>Twitter</p></a></li>
                             <li><a href="https://instagram.com/epringle365" target="_blank"><p>Instagram</p></a></li>
-                            <li><a href="https://facebook.com/epringle7" target="_blank"><p>Facebook</p></a></li>
                         </ul>
                     </div>
                     <div class="copyright">
-                        <p>Made with love by Evan Pringle</p>
+                        <p class="text-center padding-tb-25">Coded with love by Evan Pringle</p>
                     </div>
                 </div>
             </footer>
@@ -98,7 +88,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
-
+    <!-- Scroll Reveal -->
+	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script src="./js/script.js"></script>
 
 </body>
