@@ -14,8 +14,7 @@ html {
   font-weight: 300; }
 
 body {
-  transition: 0.5s;
-  overflow-x: hidden; }
+  transition: 0.5s; }
 
 body.preload * {
   animation-duration: 0s !important;
@@ -554,7 +553,7 @@ footer .links a::after,
     padding-top: 25px; }
 
   header .image {
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 225px;
     z-index: -1; }

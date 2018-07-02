@@ -17,7 +17,7 @@ $(document).ready(function() {
 	sr.reveal('#row-100', options);
 	sr.reveal('.works-image-main', options);
 	sr.reveal('.works-image-sub', options);
-	sr.reveal('.works-image-more', options);
+	sr.reveal('.works-image-more img', options);
 	sr.reveal('.works-showcase, #row-50', {
 						duration: 1500,
 						delay: 100,

@@ -51,11 +51,12 @@ $section_padding: 100px 0px;
 html {
 	font-family: 'Encode Sans Condensed', sans-serif;
 	font-weight: 300;
+	// overflow-x: hidden;
 }
 
 body {
 	transition: 0.5s;
-	overflow-x: hidden;
+	// overflow-x: hidden;
 }
 
 body.preload * {
@@ -752,7 +753,7 @@ footer .links a::after,
 	}
 
 	header .image {
-		position: absolute;
+		position: fixed;
 		left: 0;
 		top: 225px;
 		z-index: -1;
