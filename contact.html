@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102150305-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-102150305-1');
+    </script>
+    <title>Evan Pringle | Web Developer, Videographer, and Coffee Enthusiast</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Evan Pringle | Web Developer, Videographer, and Coffee Enthusiast">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+	<nav>
+		<div class="nav-name">
+			<a href="./">Evan Pringle</h4>
+		</div>
+		<div class="nav-links">
+			<ul>
+				<a href="./"><li>Home</li></a>
+				<a href="./contact.html"><li>Contact</li></a>
+			</ul>
+		</div>
+	</nav>
+	
+	<div class="g-container">
+		<div class="business-inquiries padding-t-75 padding-b-50">
+			<h5>If you want to get in touch, or just want to grab some coffee, then email me at <a href="mailto:epringle365@vivaldi.net">epringle365@vivaldi.net</a> (please be kind to my inbox 😄).</h5>
+		</div>
+		<hr class="margin-b-50">
+		<div class="instagram padding-b-50">
+			<h5 class="padding-b-50">A great way to stay up to date is with my Instagram and Twitter.</h5>
+			<div class="instagram-post">
+				<div class="image1"></div>
+				<div class="image2"></div>
+				<div class="image3"></div>
+				<div class="image4"></div>
+				<div class="image5"></div>
+				<div class="image6"></div>
+				<div class="image7"></div>
+				<div class="image8"></div>
+			</div>
+		</div>
+		<div class="twitter padding-b-50">
+			<div class="twitter-feed">
+				<a class="twitter-timeline"
+				data-dnt="true"
+				data-cards="hidden"
+				data-chrome="noborders nofooter noheader transparent"
+				data-tweet-limit="4"
+				data-width="800"
+				href="https://twitter.com/Epringle365?ref_src=twsrc%5Etfw"></a>
+			</div>
+			<a href="https://twitter.com/Epringle365?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-dnt="true" data-show-count="false">Follow @Epringle365</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</div>
+
+		<footer class="padding-t-100">
+			<div class="container">
+				<div class="contact">
+					<h5 class="contact-container">Want to get in <a href="mailto:evan.pringle1@gmail.com">touch</a>?</h5>
+				</div>
+				<div class="links">
+					<ul class="list">
+						<li><a href="https://github.com/SrgSprinkles/portfolio" target="_blank"><p>GitHub</p></a></li>
+						<li><a href="https://linkedin.com/in/evan-pringle/" target="_blank"><p>LinkedIn</p></a></li>
+						<li><a href="https://twitter.com/epringle365" target="_blank"><p>Twitter</p></a></li>
+						<li><a href="https://instagram.com/epringle365" target="_blank"><p>Instagram</p></a></li>
+					</ul>
+				</div>
+				<div class="copyright">
+					<p class="text-center padding-tb-25">Coded with love by Evan Pringle</p>
+				</div>
+			</div>
+		</footer>
+
+	</div>
+
+	<!-- jQuery v3.3.1 -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- widget.js -->
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	
+	<!-- <script>
+		window.twttr = (function(d, s, id) {
+			console.log(d);
+			console.log(s);
+			console.log(id);
+			var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {};
+			if (d.getElementById(id)) return t;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "https://platform.twitter.com/widgets.js";
+			fjs.parentNode.insertBefore(js, fjs);
+			
+			t._e = [];
+			t.ready = function(f) {
+				t._e.push(f);
+			};
+			
+			return t;
+		}(document, "script", "twitter-wjs"));
+	</script> -->
+
+	<script>
+		$.ajax({
+			type: "GET",
+			// MAKE SURE YOU ENCRYPT YOUR ACCESS TOKEN
+			url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=27280193.c5edb54.027ef3ae1d8f46c1baf4dbaf65f0aa99&count=8',
+			success: function(response) {
+				console.log(response);
+				let img;
+				let link;
+
+				for (let i = 0; i < response.data.length; i++) {
+					img = response.data[i].images.standard_resolution.url
+					link = response.data[i].link;
+					$('.instagram-post .image' + (i+1)).html('<a href="' + link +'" target="_blank"><img src="' + img + '"></a>');
+				}
+			},
+			error: function(event, xhr, ajaxSettings, error) {
+				console.log(event + ' ' + error);
+			}
+		});
+	</script>
+
+
+	<!-- <script>
+		$.ajax({
+			type: 'GET',
+			// headers: {'oath_consumer_key': 'iMTQtnEb2vnI4ZoeSB1DkRvtp'},
+			url: 'https://api.twitter.com/1/statuses/user_timeline.json?screen_name=twitterapi&count=2',
+			success: function(response) {
+				console.log(response);
+			},
+			error: function(xhr, textStatus, errorMsg) {
+				console.log('ERROR: ' + textStatus + errorMsg);
+			}
+		});
+
+	</script> -->
+
+</body>
+</html>

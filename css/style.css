@@ -129,6 +129,21 @@ a {
 .margin-tb-100 {
   margin: 100px 0px; }
 
+.margin-b-10 {
+  margin-bottom: 10px; }
+
+.margin-b-25 {
+  margin-bottom: 25px; }
+
+.margin-b-50 {
+  margin-bottom: 50px; }
+
+.margin-b-75 {
+  margin-bottom: 75px; }
+
+.margin-b-100 {
+  margin-bottom: 100px; }
+
 .margin-lr-10 {
   margin: 0px 10px; }
 
@@ -479,6 +494,43 @@ footer .links a::after,
 
 .works-showcase-end a:hover::before {
   width: 100%; }
+
+.instagram-post {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.instagram-post div {
+  margin: 0px 20px 20px 0px;
+  overflow: hidden;
+  height: 380px;
+  width: 380px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(17, 17, 17, 0.75);
+  padding: 16px 30px; }
+
+nav ul {
+  display: flex;
+  list-style: none; }
+
+.nav-name a {
+  color: white;
+  font-size: 30px;
+  font-weight: bolder;
+  letter-spacing: 2px; }
+
+.nav-links li {
+  color: white;
+  font-size: 20px;
+  padding-left: 25px;
+  letter-spacing: 1px; }
 
 /******* Media Queries *******/
 /* XS Devices */

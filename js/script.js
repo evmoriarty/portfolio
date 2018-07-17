@@ -38,17 +38,17 @@ $('footer a, .site-link a').hover(
 	}
 );
 
-// function openNav() {
-// 	$('#sideNav').css('width', '200px');
-// 	$('body').css('background-color', 'rgba(0,0,0,0.4)');
-// 	$('#main-content img').css('opacity', '0.3');
-// }
+function openNav() {
+	$('#sideNav').css('width', '200px');
+	$('body').css('background-color', 'rgba(0,0,0,0.4)');
+	$('#main-content img').css('opacity', '0.3');
+}
 
-// function closeNav() {
-// 	$('#sideNav').css('width', '0px');
-// 	$('body').css('background-color', 'white');
-// 	$('#main-content img').css('opacity', '1');
-// }
+function closeNav() {
+	$('#sideNav').css('width', '0px');
+	$('body').css('background-color', 'white');
+	$('#main-content img').css('opacity', '1');
+}
 
 $('#northlich').click(function() {
 	location.href="./northlich.html";
