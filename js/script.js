@@ -61,14 +61,3 @@ $('#engelandmartin').click(function() {
 $('#cyberatuc').click(function() {
 	location.href="./cyberatuc.html";
 });
-
-
-/* Check the initial screen size */
-$(document).ready(function() {
-	let $window = $(window);
-	let windowSize = $window.width();
-
-	if (windowSize <= 756) {
-		$('#cyberatuc').attr('src', './img/cyber@uc2.png');
-	}
-});
