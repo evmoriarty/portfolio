@@ -733,9 +733,73 @@ hr {
 	z-index: -1;
 }
 
-// .social-media .video {
-// 	background-image: url('../img/play-icon.png');
-// }
+
+/******* Error Page *******/
+#error-page .home-btn {
+	position: absolute;
+}
+
+#error-page p {
+	font-size: 20px;
+}
+
+#error-page .main-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 275px;
+}
+
+
+#error-page .gears {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-top: 100px;
+}
+
+#gear1 img,
+#gear2 img {
+	// -webkit-animation: spin 5s linear forwards infinite;
+	//    -moz-animation: spin 5s linear forwards infinite;
+	// 	 -o-animation: spin 5s linear forwards infinite;
+			// animation: spin 2s linear forwards infinite;
+	animation-play-state: running;
+	display: inline-block;
+	transform-origin: 50% 50%;
+	animation: f-spin 3.5s linear infinite;
+}
+
+#gear1 img {
+	animation: f-spin 3.5s linear infinite;
+}
+
+#gear2 img {
+	margin-left: -15px;
+	animation: r-spin 3s linear infinite;
+}
+
+@keyframes f-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes r-spin {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
 
 
 /******* Media Queries *******/
@@ -783,6 +847,12 @@ hr {
 
 	footer .links li + li::before {
 		left: -17px;
+	}
+
+	#error-page h3 {
+		font-size: $h4_font-size;
+		font-weight: $h4_font-weight;
+		letter-spacing: $h4_letter-spacing;
 	}
 }
 
