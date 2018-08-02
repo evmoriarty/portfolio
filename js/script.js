@@ -39,8 +39,8 @@ $('footer a, .site-link a, .hover-off').hover(
 );
 
 function openNav() {
-	$('#sideNav').css('width', '200px');
-	$('body').css('background-color', 'rgba(0,0,0,0.4)');
+	$('#sideNav').css('width', '100%');
+	$('body').css('background-color', 'rgba(0,0,0,0.6)');
 	$('#main-content img').css('opacity', '0.3');
 }
 
