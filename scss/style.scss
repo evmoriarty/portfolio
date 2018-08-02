@@ -57,13 +57,6 @@ body {
 	transition: 0.5s;
 }
 
-body.preload * {
-	animation-duration: 0s !important;
-	-webkit-animation-duration: 0s !important;
-	transition: 0s !important;
-	-webkit-transition: 0s !important;
-}
-
 h1 {
 	font-size: $h1_font-size;
 	font-weight: $h1_font-weight;
@@ -680,54 +673,6 @@ footer .links a::after,
 	width: 100%;
 }
 
-.instagram-post {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.instagram-post div {
-	margin: 0px 20px 20px 0px;
-	overflow: hidden;
-	height: 380px;
-	width: 380px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.instagram-post .video .play-icon {
-	position: absolute;
-}
-
-.instagram-post .video .play-icon img {
-	width: initial!important;
-}
-
-.twitter-feed .tweet {
-	display: flex;
-}
-
-.twitter-feed .tweet img {
-	border-radius: 50%;
-}
-
-.twitter-feed .tweet-content {
-	padding-left: 15px;
-}
-
-.tweet-content p {
-	padding-bottom: 10px;
-}
-
-.tweet-content div {
-	padding-bottom: 8px;
-}
-
-.tweet-content a {
-	color: #888888;
-}
-
 hr {
 	position: initial;
 	z-index: -1;
@@ -764,23 +709,22 @@ hr {
 
 #gear1 img,
 #gear2 img {
-	// -webkit-animation: spin 5s linear forwards infinite;
-	//    -moz-animation: spin 5s linear forwards infinite;
-	// 	 -o-animation: spin 5s linear forwards infinite;
-			// animation: spin 2s linear forwards infinite;
 	animation-play-state: running;
 	display: inline-block;
 	transform-origin: 50% 50%;
-	animation: f-spin 3.5s linear infinite;
 }
 
 #gear1 img {
-	animation: f-spin 3.5s linear infinite;
+	-webkit-animation: f-spin 3.5s linear infinite;
+	   -moz-animation: f-spin 3.5s linear infinite;
+			animation: f-spin 3.5s linear infinite;
 }
 
 #gear2 img {
 	margin-left: -15px;
-	animation: r-spin 3s linear infinite;
+	-webkit-animation: r-spin 3.5s linear infinite;
+	   -moz-animation: r-spin 3.5s linear infinite;
+			animation: r-spin 3s linear infinite;
 }
 
 @keyframes f-spin {
@@ -888,7 +832,6 @@ hr {
 	.land-imgs {
 		flex-direction: column;
 		align-items: center;
-		// padding-top: 50px;
 	}
 
 	#row-100 {
@@ -930,10 +873,6 @@ hr {
 		mask-image: linear-gradient(to top, transparent 15%, black 120%);
 		-webkit-mask-image: linear-gradient(to top, transparent 15%, black 120%);
 	}
-
-	// .landing-image img {
-	// 	object-fit: contain;
-	// }
 
 	.land-imgs .landing-image img {
 		height: 250px;

@@ -1,15 +1,12 @@
 $(document).ready(function() {
-	setTimeout(function(){
-		document.body.className="";
-	},1);
 
 	/* Scroll Reveal */
 	window.sr = ScrollReveal();
+
 	let options = {
 		duration: 1500,
 		distance: '100px',
 		scale: 1,
-		viewFactor: 0.2			// e.g., 0.5 means 50% of the element has to be shown before it becomes visible
 	}
 	sr.reveal('header .text', { duration: 1500, distance: '100px', scale: 1 });
 	sr.reveal('header .image', { duration: 1500, distance: '100px', scale: 1 });
@@ -23,9 +20,8 @@ $(document).ready(function() {
 						delay: 100,
 						distance: '100px',
 						scale: 1,
-						viewFactor: 0.5		// 0.5 means 50% of the element has to be shown before it becomes visible
+						viewFactor: 0.5				// e.g., 0.5 means 50% of the element has to be shown before it becomes visible
 					});
-
 });
 
 $('footer a, .site-link a, .hover-off').hover(

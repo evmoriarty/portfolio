@@ -16,12 +16,6 @@ html {
 body {
   transition: 0.5s; }
 
-body.preload * {
-  animation-duration: 0s !important;
-  -webkit-animation-duration: 0s !important;
-  transition: 0s !important;
-  -webkit-transition: 0s !important; }
-
 h1 {
   font-size: 96px;
   font-weight: 300;
@@ -512,44 +506,6 @@ footer .links a::after,
 .works-showcase-end a:hover::before {
   width: 100%; }
 
-.instagram-post {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
-
-.instagram-post div {
-  margin: 0px 20px 20px 0px;
-  overflow: hidden;
-  height: 380px;
-  width: 380px;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.instagram-post .video .play-icon {
-  position: absolute; }
-
-.instagram-post .video .play-icon img {
-  width: initial !important; }
-
-.twitter-feed .tweet {
-  display: flex; }
-
-.twitter-feed .tweet img {
-  border-radius: 50%; }
-
-.twitter-feed .tweet-content {
-  padding-left: 15px; }
-
-.tweet-content p {
-  padding-bottom: 10px; }
-
-.tweet-content div {
-  padding-bottom: 8px; }
-
-.tweet-content a {
-  color: #888888; }
-
 hr {
   position: initial;
   z-index: -1; }
@@ -581,14 +537,17 @@ hr {
 #gear2 img {
   animation-play-state: running;
   display: inline-block;
-  transform-origin: 50% 50%;
-  animation: f-spin 3.5s linear infinite; }
+  transform-origin: 50% 50%; }
 
 #gear1 img {
+  -webkit-animation: f-spin 3.5s linear infinite;
+  -moz-animation: f-spin 3.5s linear infinite;
   animation: f-spin 3.5s linear infinite; }
 
 #gear2 img {
   margin-left: -15px;
+  -webkit-animation: r-spin 3.5s linear infinite;
+  -moz-animation: r-spin 3.5s linear infinite;
   animation: r-spin 3s linear infinite; }
 
 @keyframes f-spin {
