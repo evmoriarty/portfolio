@@ -20,53 +20,46 @@
 </head>
 <body>
 
-	<nav>
-		<div class="nav-name">
-			<a href="./">Evan Pringle</h4>
-		</div>
-		<div class="nav-links">
-			<ul>
-				<a href="./"><li>Home</li></a>
-				<a href="./contact.html"><li>Contact</li></a>
-			</ul>
-		</div>
-	</nav>
+	<div id="sideNav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="img/close.svg" class="closebtn-img" alt="close_btn"></a>
+		<a href="./index.html">Home</a>
+		<a href="#">About</a>
+		<a href="./contact.html">Contact</a>
+	</div>
 	
 	<div class="g-container">
-		<div class="business-inquiries padding-t-75 padding-b-50">
-			<h5>If you want to get in touch, or just want to grab some coffee, then email me at <a href="mailto:epringle365@vivaldi.net">epringle365@vivaldi.net</a> (please be kind to my inbox 😄).</h5>
+		<nav class="d-flex padding-tb-25">
+			<a href="#" onclick="openNav()"><img class="sidenavMenu" src="img/circuit_menu.svg" alt="circuit_menu"></a>
+		</nav>
+
+		<div class="business-inquiries padding-t-75 margin-b-50">
+			<h5>If you want to get in touch, or just want to grab some coffee, email me at <a href="mailto:epringle365@vivaldi.net" class="d-inline-block hover-off p-relative">epringle365@vivaldi.net</a> (please be kind to my inbox 😄).</h5>
 		</div>
-		<hr class="margin-b-50">
-		<div class="instagram padding-b-50">
-			<h5 class="padding-b-50">A great way to stay up to date is with my Instagram and Twitter.</h5>
+		<hr class="margin-b-50 p-relative">
+		<div class="social-media padding-b-50">
+			<h5 class="padding-b-50 social-text">A great way to stay up to date is with my <a href="https://instagram.com/epringle365" class="d-inline-block hover-off p-relative" target="_blank">Instagram</a> and <a href="https://twitter.com/epringle365" class="d-inline-block hover-off p-relative" target="_blank">Twitter</a>.</h5>
 			<div class="instagram-post">
-				<div class="image1"></div>
-				<div class="image2"></div>
-				<div class="image3"></div>
-				<div class="image4"></div>
-				<div class="image5"></div>
-				<div class="image6"></div>
-				<div class="image7"></div>
-				<div class="image8"></div>
+				<div class="post1"></div>
+				<div class="post2"></div>
+				<div class="post3"></div>
+				<div class="post4"></div>
+				<div class="post5"></div>
+				<div class="post6"></div>
+				<div class="post7"></div>
+				<div class="post8"></div>
 			</div>
 		</div>
-		<div class="twitter padding-b-50">
-			<div class="twitter-feed">
-				<a class="twitter-timeline"
-				data-dnt="true"
-				data-cards="hidden"
-				data-chrome="noborders nofooter noheader transparent"
-				data-tweet-limit="4"
-				data-width="800"
-				href="https://twitter.com/Epringle365?ref_src=twsrc%5Etfw"></a>
-			</div>
-			<a href="https://twitter.com/Epringle365?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-dnt="true" data-show-count="false">Follow @Epringle365</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<div class="twitter-feed padding-b-50">
+			<div class="tweet tweet1 padding-b-25"></div>
+			<div class="tweet tweet2 padding-b-25"></div>
+			<div class="tweet tweet3 padding-b-25"></div>
+			<a href="https://twitter.com/epringle365?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-dnt="true" data-show-count="false">Follow @epringle365</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 		</div>
 
-		<footer class="padding-t-100">
+		<footer class="padding-t-50">
 			<div class="container">
 				<div class="contact">
-					<h5 class="contact-container">Want to get in <a href="mailto:evan.pringle1@gmail.com">touch</a>?</h5>
+					<h5 class="contact-container">Want to get in <a href="mailto:epringle365@vivaldi.net">touch</a>?</h5>
 				</div>
 				<div class="links">
 					<ul class="list">
@@ -77,7 +70,7 @@
 					</ul>
 				</div>
 				<div class="copyright">
-					<p class="text-center padding-tb-25">Coded with love by Evan Pringle</p>
+					<p class="text-center padding-tb-25">Coded with 🖤 by Evan Pringle</p>
 				</div>
 			</div>
 		</footer>
@@ -86,34 +79,10 @@
 
 	<!-- jQuery v3.3.1 -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-	<!-- widget.js -->
-	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-	
-	<!-- <script>
-		window.twttr = (function(d, s, id) {
-			console.log(d);
-			console.log(s);
-			console.log(id);
-			var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {};
-			if (d.getElementById(id)) return t;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = "https://platform.twitter.com/widgets.js";
-			fjs.parentNode.insertBefore(js, fjs);
-			
-			t._e = [];
-			t.ready = function(f) {
-				t._e.push(f);
-			};
-			
-			return t;
-		}(document, "script", "twitter-wjs"));
-	</script> -->
-
+	<script src="./js/script.js"></script>
 	<script>
 		$.ajax({
-			type: "GET",
+			type: 'GET',
 			// MAKE SURE YOU ENCRYPT YOUR ACCESS TOKEN
 			url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=27280193.c5edb54.027ef3ae1d8f46c1baf4dbaf65f0aa99&count=8',
 			success: function(response) {
@@ -122,9 +91,21 @@
 				let link;
 
 				for (let i = 0; i < response.data.length; i++) {
-					img = response.data[i].images.standard_resolution.url
+					img = response.data[i].images.standard_resolution
 					link = response.data[i].link;
-					$('.instagram-post .image' + (i+1)).html('<a href="' + link +'" target="_blank"><img src="' + img + '"></a>');
+					if (response.data[i].type == 'video') {
+						$('.instagram-post .post' + (i+1)).addClass('video');
+						$('.instagram-post .post' + (i+1)).html('<a href="' + link +'" target="_blank"><div class="play-icon"><img src="./img/play-icon.png"></div><img src="' + img.url + '"></a>');
+					} else {
+						$('.instagram-post .post' + (i+1)).html('<a href="' + link +'" target="_blank"><img src="' + img.url + '"></a>');
+					}
+
+					if (img.width > img.height) {											// Set the height = 100% if the image is portrait
+						$('.instagram-post .post' + (i+1) + ' a').css('height', '100%');
+						$('.instagram-post .post' + (i+1) + ' img').css('height', '100%');
+					} else {																// Set the width = 100% if the image is landscape
+						$('.instagram-post .post' + (i+1) + ' img').css('width', '100%');
+					}
 				}
 			},
 			error: function(event, xhr, ajaxSettings, error) {
@@ -132,22 +113,47 @@
 			}
 		});
 	</script>
+	<script>
+		let name = 'Epringle365';
+		$.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('http://twitter.com/') + name + '&callback=?', function(response){
+			// var timeline = response.replace(/<div id="timeline" class="ProfileTimeline ">[\r|\s|\S]*/g).match(/<div class="stream">/g).length();
+			response = response.contents;						// replaces the actual response with HTML
+			let timeline = $(response).find('.tweet');			// finds the 'ProfileTimeline HTML
+			timeline.splice(0, 1); 								// removes the pinned tweet
+			for (let i = timeline.length-1; i >= 0; i--) {		// remove RTs
+				if(timeline[i].dataset.screenName != name) {
+					// console.log('Deleting tweet(' + i + ') by ' + timeline[i].dataset.screenName);
+					timeline.splice(i, 1);
+				}
+			}
+			console.log(timeline);
 
+			for (let t = 0; t < 3; t++) {
+				let timelineHTML = timeline[t].innerHTML;
+				let avatar = $(timelineHTML).find('.avatar')[0].src;						// find avatar image
+				// console.log(avatar);
+				// let fullName = $(timelineHTML).find('.fullname')[0].textContent;			// find full name
+				// console.log(fullName);
+				let userName = $(timelineHTML).find('.username')[0].textContent;			// find user name
+				// console.log(userName);
+				let tweetTime = $(timelineHTML).find('.tweet-timestamp')[0].textContent;	// find tweet time
+				// console.log(tweetTime);
+				let tweet = $(timelineHTML).find('.tweet-text');							// find tweet text
+				// console.log(tweet);
+				let tweetText;
+				let status = '';
 
-	<!-- <script>
-		$.ajax({
-			type: 'GET',
-			// headers: {'oath_consumer_key': 'iMTQtnEb2vnI4ZoeSB1DkRvtp'},
-			url: 'https://api.twitter.com/1/statuses/user_timeline.json?screen_name=twitterapi&count=2',
-			success: function(response) {
-				console.log(response);
-			},
-			error: function(xhr, textStatus, errorMsg) {
-				console.log('ERROR: ' + textStatus + errorMsg);
+				if (tweet.length > 1) {
+					status = 'https://twitter.com' + timeline[t].dataset.permalinkPath;
+					tweetText = tweet[0].childNodes[0].textContent;
+				} else {
+					tweetText = tweet[0].textContent;
+				}
+
+				$('.twitter-feed .tweet' + (t+1)).html('<div class="tweet-avatar"><a href="https://twitter.com/epringle365" target="_blank"><img src="' + avatar + '"></a></div> <div class="tweet-content"><p><b><a href="https://twitter.com/epringle365" target="_blank">' + userName + '</a></b></p><div class="tweet-details"><h5>' + tweetText + ' <a href="' + status + '" target="_blank">' + status + '</a></h5></div><p><a href="' + status + '" target="_blank">' + tweetTime + '</a></p> </div>');
 			}
 		});
-
-	</script> -->
+	</script>
 
 </body>
 </html>

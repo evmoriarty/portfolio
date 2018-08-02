@@ -9,7 +9,7 @@ $(document).ready(function() {
 		duration: 1500,
 		distance: '100px',
 		scale: 1,
-		viewFactor: 0.5			// 0.5 means 50% of the element has to be shown before it becomes visible
+		viewFactor: 0.2			// e.g., 0.5 means 50% of the element has to be shown before it becomes visible
 	}
 	sr.reveal('header .text', { duration: 1500, distance: '100px', scale: 1 });
 	sr.reveal('header .image', { duration: 1500, distance: '100px', scale: 1 });
@@ -28,7 +28,7 @@ $(document).ready(function() {
 
 });
 
-$('footer a, .site-link a').hover(
+$('footer a, .site-link a, .hover-off').hover(
 	function() {
 		$(this).removeClass('hover-off');
 		$(this).addClass('hover-on');
@@ -65,12 +65,10 @@ $('#cyberatuc').click(function() {
 
 /* Check the initial screen size */
 $(document).ready(function() {
-	/* Media Queries */
 	let $window = $(window);
 	let windowSize = $window.width();
 
 	if (windowSize <= 756) {
 		$('#cyberatuc').attr('src', './img/cyber@uc2.png');
 	}
-
 });
