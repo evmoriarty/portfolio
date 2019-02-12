@@ -410,60 +410,68 @@ header img {
 
 
 /******* My-Works *******/
-.land-imgs .landing-image:hover {
-	animation: zoomzoom 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+.land-imgs .landing-image:hover,
+.land-imgs .land-img1:hover,
+.land-imgs .land-img2:hover {
+	// animation: zoomzoom 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+	transform: scale(0.99);
 	cursor: pointer;
 }
 
-.land-imgs .landing-image {
+.land-imgs .landing-image,
+.land-imgs .land-img1,
+.land-imgs .land-img2 {
 	border: 6px solid black;
-	animation: zoom-back 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+	// animation: zoom-back 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+	transition: all 0.6s;
 }
 
 .land-imgs .landing-image img:hover {
-	animation: zoom-img 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+	// animation: zoom-img 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+	transform: scale(1.04);
 }
 
 .land-imgs .landing-image img {
 	height: 525px;
-	animation: zoom-img-back 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+	// animation: zoom-img-back 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+	transition: all 0.6s;
 }
 
-@keyframes zoomzoom {
-	from {
-		transform: scale(1);
-	}
-	to {
-		transform: scale(0.99);
-	}
-}
+// @keyframes zoomzoom {
+// 	from {
+// 		transform: scale(1);
+// 	}
+// 	to {
+// 		transform: scale(0.99);
+// 	}
+// }
 
-@keyframes zoom-back {
-	from {
-		transform: scale(0.99);
-	}
-	to {
-		transform: scale(1);
-	}
-}
+// @keyframes zoom-back {
+// 	from {
+// 		transform: scale(0.99);
+// 	}
+// 	to {
+// 		transform: scale(1);
+// 	}
+// }
 
-@keyframes zoom-img {
-	from {
-		transform: scale(1);
-	}
-	to {
-		transform: scale(1.04);
-	}
-}
+// @keyframes zoom-img {
+// 	from {
+// 		transform: scale(1);
+// 	}
+// 	to {
+// 		transform: scale(1.04);
+// 	}
+// }
 
-@keyframes zoom-img-back {
-	from {
-		transform: scale(1.04);
-	}
-	to {
-		transform: scale(1);
-	}
-}
+// @keyframes zoom-img-back {
+// 	from {
+// 		transform: scale(1.04);
+// 	}
+// 	to {
+// 		transform: scale(1);
+// 	}
+// }
 
 
 /******* Footer *******/
@@ -507,7 +515,6 @@ footer .links li + li::before {
 	content: '-';
 	font-size: 18px;
 }
-
 
 footer .links a {
 	color: black;

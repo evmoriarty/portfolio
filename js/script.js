@@ -10,7 +10,8 @@ $(document).ready(function() {
 	}
 	sr.reveal('header .text', { duration: 1500, distance: '100px', scale: 1 });
 	sr.reveal('header .image', { duration: 1500, distance: '100px', scale: 1 });
-	sr.reveal('#row-50 .landing-image', options);
+	// sr.reveal('#row-50 .landing-image', options);
+	sr.reveal('#row-50', options);
 	sr.reveal('#row-100', options);
 	sr.reveal('.works-image-main', options);
 	sr.reveal('.works-image-sub', options);
