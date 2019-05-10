@@ -551,3 +551,14 @@ table {
 .center-image {
   margin: 0 auto;
   display: block; }
+
+.blog-video {
+  width: 75%;
+  height: 310px; }
+
+@media screen and (max-width: 600px) {
+  .blog-video {
+    height: 240px; } }
+@media screen and (max-width: 450px) {
+  .blog-video {
+    height: 150px; } }

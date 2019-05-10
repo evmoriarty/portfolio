@@ -1,3 +1,10 @@
+// Width of the content area
+$content-width:		800px !default;
+
+$on-phone: 			450px !default;
+$on-palm:			600px !default;
+$on-laptop:			800px !default;
+
 /* Blog Page */
 .blog {
 	margin-bottom: $spacing-unit * 1.25;
@@ -7,4 +14,21 @@
 .center-image {
 	margin: 0 auto;
 	display: block;
+}
+
+.blog-video {
+	width: 75%;
+	height: 310px;
+}
+
+@include media-query($on-palm) {
+	.blog-video {
+		height: 240px;
+	}
+}
+
+@include media-query($on-phone) {
+	.blog-video {
+		height: 150px;
+	}
 }

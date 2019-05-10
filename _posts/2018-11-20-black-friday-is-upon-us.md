@@ -18,10 +18,10 @@ I want to start creating sections in my posts for things that are really awesome
 
 Mumford & Sons just released a new album. Specifically, check out the song Slip Away.
 
-<iframe class="center-image" width="560" height="315" src="https://www.youtube.com/embed/LxTyy-XecxI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="center-image blog-video" src="https://www.youtube.com/embed/LxTyy-XecxI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 One of my buddies writes blogs and his most recent blog is about [hunger](https://www.mankindblog.com/home/hunger-the-first-bite). He talks about the struggles of needs vs wants and the great feeling of giving your body what it needs. Definitely worth a read!
 
 Finally, check out Steve Carell’s SNL monologue. If you like the Office, then you will love this.
 
-<iframe class="center-image" width="560" height="315" src="https://www.youtube.com/embed/PBoaVkaWQy8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="center-image blog-video" src="https://www.youtube.com/embed/PBoaVkaWQy8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
