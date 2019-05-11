@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700");
 /**
  * Reset some basic elements
  */
@@ -11,7 +12,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 400 16px/1.5 "Montserrat", Helvetica, Arial, sans-serif;
   color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
@@ -362,6 +363,11 @@ table {
 
 .post-content {
   margin-bottom: 30px; }
+  .post-content p {
+    line-height: 1.75em;
+    margin-bottom: 1.5em; }
+  .post-content iframe {
+    margin-bottom: 1.5em; }
   .post-content h2 {
     font-size: 28px; }
     @media screen and (min-width: 800px) {

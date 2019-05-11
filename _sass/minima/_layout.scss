@@ -245,6 +245,15 @@
 .post-content {
   margin-bottom: $spacing-unit;
 
+  p {
+    line-height: $blog-line-height;
+    margin-bottom: $blog-p-margin;
+  }
+
+  iframe {
+    margin-bottom: $blog-p-margin;
+  }
+
   h2 {
     @include relative-font-size(1.75);
 
