@@ -1,5 +1,7 @@
 ---
+title: Black Friday Is Upon Us.
 layout: post
+categories: Personal
 ---
 
 ![crowd-of-people-black-friday](/assets/blog/post-black-friday.jpg){: .center-image}

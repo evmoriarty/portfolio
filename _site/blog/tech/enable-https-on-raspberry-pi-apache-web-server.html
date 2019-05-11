@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.0 -->
+<title>Enable HTTPS on Rasbperry PI Apache Web Server | The Pringle Blog</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Enable HTTPS on Rasbperry PI Apache Web Server" />
+<meta name="author" content="Evan Pringle" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="When I was researching how to add an SSL certificate to my self-hosted website, it seemed like there’s a daunting amount of ways to add HTTPS to your website. I tried a couple of ways of enabling HTTPS and it they kind of worked. It added HTTPS but the certificate was self-signed, so whenever someone came onto my website they would be greeted with a warning that they had to click through and then they would see that the lock next to the website name had a red slash through it. I found a solution, and it’s Certbot." />
+<meta property="og:description" content="When I was researching how to add an SSL certificate to my self-hosted website, it seemed like there’s a daunting amount of ways to add HTTPS to your website. I tried a couple of ways of enabling HTTPS and it they kind of worked. It added HTTPS but the certificate was self-signed, so whenever someone came onto my website they would be greeted with a warning that they had to click through and then they would see that the lock next to the website name had a red slash through it. I found a solution, and it’s Certbot." />
+<link rel="canonical" href="http://localhost:4000/blog/tech/enable-https-on-raspberry-pi-apache-web-server.html" />
+<meta property="og:url" content="http://localhost:4000/blog/tech/enable-https-on-raspberry-pi-apache-web-server.html" />
+<meta property="og:site_name" content="The Pringle Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-02-01T00:00:00-05:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/tech/enable-https-on-raspberry-pi-apache-web-server.html"},"url":"http://localhost:4000/blog/tech/enable-https-on-raspberry-pi-apache-web-server.html","author":{"@type":"Person","name":"Evan Pringle"},"description":"When I was researching how to add an SSL certificate to my self-hosted website, it seemed like there’s a daunting amount of ways to add HTTPS to your website. I tried a couple of ways of enabling HTTPS and it they kind of worked. It added HTTPS but the certificate was self-signed, so whenever someone came onto my website they would be greeted with a warning that they had to click through and then they would see that the lock next to the website name had a red slash through it. I found a solution, and it’s Certbot.","headline":"Enable HTTPS on Rasbperry PI Apache Web Server","dateModified":"2019-02-01T00:00:00-05:00","datePublished":"2019-02-01T00:00:00-05:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/styles.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="The Pringle Blog" /></head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">The Pringle Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/blog/">Blog</a><a class="page-link" href="/">Home</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Enable HTTPS on Rasbperry PI Apache Web Server</h1>
+    <p class="post-meta">
+      <!-- Categories -->
+      
+      
+        <p><img src="/assets/icon8/tags-50.png" class="blog-icon">
+        
+          <a href="http://localhost:4000/blog/tech/">Tech</a>
+        
+        </p>
+      
+      <!-- Date -->
+      <img src="/assets/icon8/clock-48.png" class="blog-icon">
+      <time class="dt-published" datetime="2019-02-01T00:00:00-05:00" itemprop="datePublished">Feb 1, 2019
+      </time>
+      <!-- Page Author --></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>When I was researching how to add an SSL certificate to my self-hosted website, it seemed like there’s a daunting amount of ways to add HTTPS to your website. I tried a couple of ways of enabling HTTPS and it they kind of worked. It added HTTPS but the certificate was self-signed, so whenever someone came onto my website they would be greeted with a warning that they had to click through and then they would see that the lock next to the website name had a red slash through it. I found a solution, and it’s <strong>Certbot</strong>.</p>
+
+<h2 id="certbot">Certbot</h2>
+
+<p>This was the best and easiest way for me personally to get HTTPS on my Apache site. Go to their website <a href="https://certbot.eff.org/">https://certbot.eff.org/</a>, and you should be greeted with the following:</p>
+
+<p><img src="/assets/blog/certbot.png" alt="certbot-homepage" /></p>
+
+<h3 id="installing-certbot">Installing Certbot</h3>
+
+<ol>
+  <li>On the ‘<em>Software</em>’ dropdown, select <strong>Apache</strong></li>
+  <li>I am using my Raspberry PI, so on the ‘<em>System</em>’ dropdown I choose <strong>Debian 9 (Stretch)</strong></li>
+</ol>
+
+<h4 id="enable-debian-backports">Enable Debian Backports</h4>
+
+<p>To enable the Stretch backports repository, run:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install certbot python-certbot-apache -t stretch-backports
+</code></pre></div></div>
+
+<h3 id="getting-started">Getting Started</h3>
+
+<p>Certbot has an Apache plugin, and automates the certificate installation:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo certbot --apache
+</code></pre></div></div>
+
+<p>Running the above command will generate your certificate for you, and Certbot automatically edits your Apache configuration. If you would like to make the changes to your Apache configuration manually, you can use the <em>certonly</em> subcommand:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo certbot --apache certonly
+</code></pre></div></div>
+
+<p>If you want to learn more about how to use Certbot read their <a href="https://certbot.eff.org/docs/">documentation</a>.</p>
+
+<h3 id="renewing-the-certificate">Renewing the Certificate</h3>
+
+<p>If you chose the command where Certbot automatically edits your configuration, Certbot will also automatically update your certificate right before it expires. Their certificates last 90 days, and it’s very useful to take advantage of this feature. You can test the automatic renewal of your certificates by running this command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo certbot renew --dry-run
+</code></pre></div></div>
+
+  </div>
+
+
+  <a class="u-url" href="/blog/tech/enable-https-on-raspberry-pi-apache-web-server.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col one-half">
+      <h2 class="footer-heading">The Pringle Blog</h2>
+        <ul class="contact-list">
+          <li class="p-name">Evan Pringle</li><li><a class="u-email" href="mailto:epringle365@vivaldi.net">epringle365@vivaldi.net</a></li></ul>
+      </div>
+
+      <div class="footer-col one-half">
+        <!-- <p>A self-taught Full Stack Web Developer with a passion to make the internet fascinating.
+</p> -->
+        <p>&copy; Evan Pringle</p>
+      </div>
+
+      <div class="social-links"><ul class="social-media-list"><li><a href="https://dribbble.com/sprinfo" title="sprinfo"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#dribbble"></use></svg></a></li><li><a href="https://github.com/SrgSprinkles" title="SrgSprinkles"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a href="https://www.instagram.com/epringle365" title="epringle365"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#instagram"></use></svg></a></li><li><a href="https://twitter.com/epringle365" title="epringle365"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li><li><a href="/feed.xml" title="rss"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#rss"></use></svg></a></li></ul>
+</div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
