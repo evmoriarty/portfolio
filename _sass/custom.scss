@@ -1,5 +1,5 @@
 // Width of the content area
-$content-width:		800px !default;
+$content-width:		850px !default;
 
 $on-phone: 			450px !default;
 $on-palm:			600px !default;
@@ -10,7 +10,39 @@ $on-laptop:			800px !default;
 	margin-bottom: $spacing-unit * 1.25;
 }
 
-/* Posts */
+/********* 
+ * Posts *
+ *********/
+
+article.post {
+	line-height: 1.75em;
+}
+
+.post-content a {
+	color: rgb(74, 198, 255);
+}
+
+.post-content a:hover {
+	color: rgb(109, 210, 255);
+}
+
+.post-header {
+	margin-top: 44px;
+	margin-bottom: 44px;
+}
+
+.header-image {
+	margin-top: 0;
+	padding: 390px 0 44px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.header-image h1 {
+	color: white;
+}
+
 .center-image {
 	margin: 0 auto;
 	display: block;
@@ -25,6 +57,9 @@ $on-laptop:			800px !default;
 	.blog-video {
 		height: 240px;
 	}
+	.header-image {
+		padding: 138px 0 30px;
+	}
 }
 
 @include media-query($on-phone) {
@@ -38,7 +73,19 @@ $on-laptop:			800px !default;
 	font-size: 14px;
 }
 
+.category-link,
+.category-link:visited,
+.category-link:hover {
+	color: #828282;	
+}
+
 .blog-icon {
-	width: 20px;
 	margin-right: 5px;
+}
+
+
+/* Footer */
+
+.social-links {
+	margin-bottom: 30px;
 }

@@ -1,19 +1,19 @@
 @charset "utf-8";
 // @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:300,400,700');
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
 
 // Define defaults for each variable.
 
 // $base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$base-font-family: 'Montserrat', Helvetica, Arial, sans-serif !default;
-$base-font-size:   16px !default;
+$base-font-family: 'Muli', Helvetica, Arial, sans-serif !default;
+$base-font-size:   1.1rem !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
 $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 $blog-line-height: 1.75em;
-$blog-p-margin:    1.5em; 
+$blog-p-margin:    1.75em; 
 
 $text-color:       #111 !default;
 $background-color: #fdfdfd !default;
@@ -26,7 +26,7 @@ $orange-color:     #f66a0a !default;
 $table-text-align: left !default;
 
 // Width of the content area
-$content-width:    800px !default;
+$content-width:    850px !default;
 
 $on-palm:          600px !default;
 $on-laptop:        800px !default;

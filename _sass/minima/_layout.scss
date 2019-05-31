@@ -121,8 +121,8 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
+  background-color: rgb(231, 231, 231);
 }
 
 .footer-heading {
@@ -140,6 +140,7 @@
   @include relative-font-size(0.9375);
   color: $grey-color;
   margin-left: -$spacing-unit / 2;
+  text-align: center;
   @extend %clearfix;
 }
 
@@ -190,8 +191,8 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
   flex: 1 0 auto;
+  margin-bottom: 50px;
 }
 
 .page-heading {
@@ -226,10 +227,6 @@
 /**
  * Posts
  */
-.post-header {
-  margin-bottom: $spacing-unit;
-}
-
 .post-title,
 .post-content h1 {
   @include relative-font-size(2.625);
@@ -245,7 +242,6 @@
   margin-bottom: $spacing-unit;
 
   p {
-    line-height: $blog-line-height;
     margin-bottom: $blog-p-margin;
   }
 
