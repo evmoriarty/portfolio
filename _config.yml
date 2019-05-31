@@ -13,6 +13,7 @@ minima:
 
   # generate social links in footer
   social_links:
+    email: epringle365@vivaldi.net
     twitter: epringle365
     github:  SrgSprinkles
     rss: rss
@@ -20,6 +21,8 @@ minima:
     # facebook: jekyll
     # flickr:   jekyll
     instagram: epringle365
+    stackoverflowuser: SrgSprinkles
+    stackoverflowlink: 8493023/srgsprinkles
     # linkedin: jekyll
     # pinterest: jekyll
     # youtube: jekyll
@@ -38,8 +41,12 @@ minima:
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.md
+header_pages:
+ - home.md
+ - about.md
+ - blog.md
+
+blogurl: /blog/
 
 # Build settings
 theme: minima
