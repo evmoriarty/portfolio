@@ -3,33 +3,32 @@ layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <!-- Categories -->
-      {% assign category_count = page.categories | size %}
-      {% if category_count != 0 %}
-        <p><img src="/assets/icon8/tags-50.png" class="blog-icon">
-        {% for category in page.categories %}
-          <a href="{{ site.url }}/blog/{{ category | slugify}}/">{{ category }}</a>
-        {% endfor %}
-        </p>
-      {% endif %}
-      <!-- Date -->
-      <img src="/assets/icon8/clock-48.png" class="blog-icon">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      <!-- Page Author -->
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | escape }}</span></span>
-      {%- endif -%}
-    </p>
+  {% if page.image %}
+  <header class="post-header header-image" style="background-image: url({{ page.image }})">
+  {% else %}
+  <header class="post-header" style="margin-top: ">
+  {% endif %}
+    <div class="wrapper">
+      <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+      <p class="post-meta">
+        <!-- Categories -->
+        {% assign category_count = page.categories | size %}
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        {% if category_count != 0 %}
+          {% for category in page.categories %}<a href="{{ site.blogurl }}{{ category | slugify }}/" class="category-link">{{ category }}</a>{% endfor %} | {{ page.date | date: date_format }}
+        {% endif %}
+        <!-- Page Author -->
+        {%- if page.author -%}
+          • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | escape }}</span></span>
+        {%- endif -%}
+      </p>
+    </div>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
+  <div class="wrapper">
+    <div class="post-content e-content" itemprop="articleBody">
+      {{ content }}
+    </div>
   </div>
 
 
