@@ -10,7 +10,11 @@ $on-laptop:			800px !default;
 	margin-bottom: $spacing-unit * 1.25;
 }
 
-/********* 
+.title-spacing {
+  margin: 44px 0px;
+}
+
+/*********
  * Posts *
  *********/
 
@@ -76,7 +80,7 @@ article.post {
 .category-link,
 .category-link:visited,
 .category-link:hover {
-	color: #828282;	
+	color: #828282;
 }
 
 .blog-icon {

@@ -1,6 +1,6 @@
 ---
 title: Black Friday Is Upon Us.
-layout: post
+layout: blog
 categories: Personal
 image: /assets/blog/post-black-friday.jpg
 ---

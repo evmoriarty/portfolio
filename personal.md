@@ -1,10 +1,10 @@
 ---
-layout: default
+layout: blogs-list
 title: Personal
 permalink: /blog/personal/
 ---
 
-<h1>{{ page.title }}</h1>
+<h1 class="post-title title-spacing">{{ page.title }}</h1>
 
 {% for post in site.categories.Personal %}
   <section class="blog">
