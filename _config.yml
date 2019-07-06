@@ -52,7 +52,6 @@ blogurl: /blog/
 theme: minima
 
 plugins:
- - jekyll-feed
  - jekyll-seo-tag
 
 permalink: /blog/:categories/:title:output_ext
