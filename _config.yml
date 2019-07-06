@@ -56,3 +56,5 @@ plugins:
  - jekyll-seo-tag
 
 permalink: /blog/:categories/:title:output_ext
+
+google_analytics: UA-102150305-1
