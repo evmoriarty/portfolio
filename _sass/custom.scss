@@ -1,22 +1,75 @@
 // Width of the content area
-$content-width:		850px !default;
+// $content-width:		850px !default;
+$content-width: 85% !default;
+$blog-content-width: 60% !default;
 
 $on-phone: 			450px !default;
-$on-palm:			600px !default;
+$on-palm:       600px !default;
 $on-laptop:			800px !default;
 
-/* Blog Page */
+
+/**
+ * Wrappers
+ */
+.wrapper {
+  width: $content-width;
+  margin: auto;
+}
+
+.post-wrapper {
+  width: $blog-content-width;
+  margin: auto;
+}
+
+/********************/
+/****  Home Page ****/
+/********************/
+// header .text {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   width: 100%;
+//   padding: 200px 0px;
+// }
+
+// header .image {
+//   position: absolute;
+// }
+
+
+/********************/
+/***  Blog List  ****/
+/********************/
+
+.blogs{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
 .blog {
-	margin-bottom: $spacing-unit * 1.25;
+  flex: 0 1 31%;
+  margin: 0px 10px;
+  margin-bottom: $spacing-unit * 1.25;
+}
+
+.blog .post-categories a {
+  color: #111;
+}
+
+.custom-post-title {
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .title-spacing {
   margin: 44px 0px;
 }
 
-/*********
- * Posts *
- *********/
+
+/********************/
+/*****  Posts  ******/
+/********************/
 
 article.post {
 	line-height: 1.75em;
@@ -35,9 +88,15 @@ article.post {
 	margin-bottom: 44px;
 }
 
+.blog-post-header .bar {
+  border-bottom: 4px #111 solid;
+  margin: 50px 0;
+  max-width: 170px;
+}
+
 .header-image {
 	margin-top: 0;
-	padding: 390px 0 44px;
+	padding: 260px 0;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -77,9 +136,9 @@ article.post {
 	font-size: 14px;
 }
 
-.category-link,
-.category-link:visited,
-.category-link:hover {
+.post .category-link,
+.post .category-link:visited,
+.post .category-link:hover {
 	color: #828282;
 }
 
@@ -88,7 +147,9 @@ article.post {
 }
 
 
-/* Footer */
+/********************/
+/*****  Footer  *****/
+/********************/
 
 .social-links {
 	margin-bottom: 30px;
