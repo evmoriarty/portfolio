@@ -1,5 +1,5 @@
 ---
-title: Enable HTTPS on Rasbperry PI Apache Web Server
+title: Enable HTTPS on Apache Web Server
 layout: blog
 categories: Tech
 background-image: /assets/blog/post-secure-website.jpg
