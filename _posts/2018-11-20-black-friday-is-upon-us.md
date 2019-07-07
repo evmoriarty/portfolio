@@ -2,7 +2,7 @@
 title: Black Friday Is Upon Us.
 layout: blog
 categories: Personal
-image: /assets/blog/post-black-friday.jpg
+background-image: /assets/blog/post-black-friday.jpg
 ---
 
 The jolly time when Americans are able to get a bunch of deals on the things we want. We will do anything to get them even if that means trampling over others. We want more and more but are never satisfied with what we have.

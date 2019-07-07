@@ -2,6 +2,7 @@
 title: Enable HTTPS on Rasbperry PI Apache Web Server
 layout: blog
 categories: Tech
+background-image: /assets/blog/post-secure-website.jpg
 ---
 
 When I was researching how to add an SSL certificate to my self-hosted website, it seemed like there's a daunting amount of ways to add HTTPS to your website. I tried a couple of ways of enabling HTTPS and it they kind of worked. It added HTTPS but the certificate was self-signed, so whenever someone came onto my website they would be greeted with a warning that they had to click through and then they would see that the lock next to the website name had a red slash through it. I found a solution, and it's **Certbot**.
