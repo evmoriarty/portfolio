@@ -1,5 +1,5 @@
 ---
-title: Black Friday Is Upon Us.
+title: Black Friday Is Upon Us
 layout: blog
 categories: Personal
 background-image: /assets/blog/post-black-friday.jpg
