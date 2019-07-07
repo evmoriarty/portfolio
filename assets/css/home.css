@@ -13,6 +13,9 @@ html {
   font-family: 'Encode Sans Condensed', sans-serif;
   font-weight: 300; }
 
+body {
+  overflow-x: hidden; }
+
 h1 {
   font-size: 96px;
   font-weight: 300;
@@ -278,7 +281,8 @@ header .text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%; }
+  width: 100%;
+  /*padding: 200px 0px;*/ }
 
 header span {
   color: #999; }
@@ -287,6 +291,10 @@ header h4 {
   padding: 17px 0; }
 
 header img {
+  /* position: absolute;
+  top: -30px;
+  right: -570px;
+  width: 850px; */
   width: 600px;
   height: auto; }
 
