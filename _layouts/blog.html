@@ -4,33 +4,26 @@ layout: default
 
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  {% if page.image %}
-  <header class="post-header header-image" style="background-image: url({{ page.image }})">
-  {% else %}
-  <header class="post-header" style="margin-top: ">
-  {% endif %}
-    <div class="wrapper">
-      <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-      <p class="post-meta">
-        <!-- Categories -->
-        {% assign category_count = page.categories | size %}
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        {% if category_count != 0 %}
-          {% for category in page.categories %}<a href="{{ site.blogurl }}{{ category | slugify }}/" class="category-link">{{ category }}</a>{% endfor %} | {{ page.date | date: date_format }}
-        {% endif %}
-        <!-- Page Author -->
-        {%- if page.author -%}
-          • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author | escape }}</span></span>
-        {%- endif -%}
-      </p>
-    </div>
+  <header class="post-header header-image" style="background-image: url({{ page.background-image }})">
   </header>
+    <div class="post-wrapper">
+      <div class="blog-post-header">
+        <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+        <p class="post-meta">
+          <!-- Categories -->
+          {% assign category_count = page.categories | size %}
+          {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+          {% if category_count != 0 %}
+            {% for category in page.categories %}<a href="{{ site.blogurl }}{{ category | slugify }}/" class="category-link">{{ category }}</a>{% endfor %} | {{ page.date | date: date_format }}
+          {% endif %}
+        </p>
+        <div class="bar"></div>
+      </div>
 
-  <div class="wrapper">
-    <div class="post-content e-content" itemprop="articleBody">
-      {{ content }}
+      <div class="post-content e-content" itemprop="articleBody">
+        {{ content }}
+      </div>
     </div>
-  </div>
 
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
