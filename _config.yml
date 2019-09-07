@@ -51,6 +51,11 @@ blogurl: /blog/
 # Build settings
 theme: minima
 
+# Kramdown is the markdown render
+# - auto_ids generates ids for headers in blog
+kramdown:
+  auto_ids: true
+
 plugins:
  - jekyll-seo-tag
 

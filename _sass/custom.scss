@@ -21,6 +21,17 @@ $on-laptop:			800px !default;
   margin: auto;
 }
 
+/**
+* Site header
+*/
+.site-header {
+  min-height: $spacing-unit * 1.865;
+  line-height: $base-line-height * $base-font-size * 2.75;
+
+  // Positioning context for the mobile navigation icon
+  position: relative;
+}
+
 /********************/
 /****  Home Page ****/
 /********************/
@@ -43,13 +54,13 @@ $on-laptop:			800px !default;
 
 .blogs{
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 50px;
 }
 
 .blog {
   flex: 0 1 31%;
-  margin: 0px 10px;
   margin-bottom: $spacing-unit * 1.25;
 }
 
@@ -58,8 +69,14 @@ $on-laptop:			800px !default;
 }
 
 .custom-post-title {
-  margin-top: 10px;
-  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.custom-post-date,
+.custom-post-content,
+.custom-post-categories {
+  margin-bottom: 10px;
 }
 
 .title-spacing {
@@ -116,19 +133,31 @@ article.post {
 	height: 310px;
 }
 
+@include media-query($on-laptop) {
+  .blogs .blog {
+    flex: 0 1 46%;
+  }
+}
+
 @include media-query($on-palm) {
-	.blog-video {
+  .post-wrapper{
+    width: 85%;
+  }
+  .blogs .blog {
+    flex: 0 1 100%;
+  }
+  .blog-video {
 		height: 240px;
 	}
 	.header-image {
-		padding: 138px 0 30px;
+		padding: 115px 0;
 	}
 }
 
 @include media-query($on-phone) {
-	.blog-video {
+  .blog-video {
 		height: 150px;
-	}
+  }
 }
 
 .post-date,
