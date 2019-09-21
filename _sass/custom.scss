@@ -53,15 +53,11 @@ $on-laptop:			800px !default;
 /********************/
 
 .blogs{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 25px;
+  grid-row-gap: 20px;
   margin-top: 50px;
-}
-
-.blog {
-  flex: 0 1 31%;
-  margin-bottom: $spacing-unit * 1.25;
 }
 
 .blog .post-categories a {
