@@ -57,7 +57,9 @@ kramdown:
   auto_ids: true
 
 plugins:
- - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
 
 permalink: /blog/:categories/:title:output_ext
 
