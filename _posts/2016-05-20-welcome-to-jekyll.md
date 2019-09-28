@@ -1,6 +1,6 @@
 ---
 layout: blog
-background-image: /assets/blog/post-jekyll-logo.jpg
+background-image: /assets/blog/post-jekyll.jpg
 published: true
 ---
 
