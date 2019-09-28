@@ -5,5 +5,5 @@ If you get Unable to load the EventMachine C extension; To use the pure-ruby rea
 
 To build in production:
   set JEKYLL_ENV=production
-  bundle exec jekyll build JEKYLL_ENV=production
+  bundle exec jekyll build
   set JEKYLL_ENV=development
