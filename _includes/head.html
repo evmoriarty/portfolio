@@ -2,15 +2,16 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   {%- feed_meta -%}
   {%- seo -%}
   <!-- <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}"> -->
+
   {% if page.name == 'index.md' or page.name == 'engelandmartin.md' or page.name == 'cyberatuc.md' or page.name == 'northlich.md' %}
     <link rel="stylesheet" href="{{ 'assets/css/home.css' | relative_url }}">
   {% else %}
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
   {% endif %}
+
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
@@ -18,7 +19,18 @@
   <link rel="manifest" href="/assets/site.webmanifest">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  {%- if jekyll.environment == 'production' -%}
-    {%- include google-analytics.html -%}
-  {%- endif -%}
+
+  {% if jekyll.environment == 'production' %}
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102150305-1"></script>
+    <script>
+      window['ga-disable-UA-102150305-1'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-102150305-1');
+    </script>
+  {% endif %}
+
 </head>
