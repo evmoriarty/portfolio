@@ -1,0 +1,9 @@
+{% if include.type == 'youtube' %}
+<!-- <div class="embed-video-container"> -->
+<iframe class="blog-video center-image" 
+        src="https://youtube.com/embed/{{ include.uid }}?rel=0&iv_load_policy=3" 
+        allowfullscreen="allowfullscreen" 
+        frameborder="0">
+</iframe>
+<!-- </div> -->
+{% endif %}
