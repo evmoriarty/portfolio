@@ -8,7 +8,7 @@ published: true
 
 The jolly time when Americans are able to get a bunch of deals on the things we want. We will do anything to get them even if that means trampling over others. We want more and more but are never satisfied with what we have.
 
-![shoppers-going-crazy-black-friday](https://media.giphy.com/media/xUOxeRSgzGd7rbAqWs/giphy.gif){: .center-image}
+![shoppers-going-crazy-black-friday](https://media.giphy.com/media/xUOxeRSgzGd7rbAqWs/giphy.gif){: .center-image .blog-video}
 
 I recently saw a [video](https://youtu.be/_GvvJ5qmumI?t=310) about how our culture is fixated on **materialism** and Black Friday fuels that mindset.The video inspired me to write this post and to share my point-of-view on materialism. In the video, Juliet Schor, a Sociology professor at Boston College, says our culture needs to shift back into **true materialism**. What is true materialism? Dr. Schor explains that true materialism is truly caring about the materiality of goods. She goes on, “We buy and then throw out. What matters is the symbolic meaning. That’s why we discard things so rapidly because they lose social value.” When was the last time you wore a pair of shoes until they were falling apart? Why do we want the newest iPhone when last year’s model is essentially the same exact thing? American culture needs a reality check.
 
