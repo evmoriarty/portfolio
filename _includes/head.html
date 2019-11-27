@@ -4,13 +4,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- feed_meta -%}
   {%- seo -%}
-  <!-- <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}"> -->
-
   {% if page.name == 'index.md' or page.name == 'engelandmartin.md' or page.name == 'cyberatuc.md' or page.name == 'northlich.md' %}
     <link rel="stylesheet" href="{{ 'assets/css/home.css' | relative_url }}">
   {% else %}
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
   {% endif %}
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
