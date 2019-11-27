@@ -1,0 +1,34 @@
+<!-- Uses page's title -->
+{% assign title = page.title | default: layout.title %}
+<!-- Puts my twitter username -->
+{% capture tweet_by %} by @{{ site.minima.social_links.twitter }}{% endcapture %}
+<!-- Encodes link url -->
+{% assign share_url = site.url | append: page.url | url_encode %}
+<!-- Creates a hashtag array -->
+<!--
+{% assign tweet_hashtags = "" | split: "," %}
+{% if page.tags contains "docker" %}
+    {% assign tweet_hashtags = tweet_hashtags | push: "Docker" %}
+{% endif %}
+{% if page.tags contains "ansible" %}
+    {% assign tweet_hashtags = tweet_hashtags | push: "Ansible" %}
+{% endif %}
+{% if page.tags contains "flask" %}
+    {% assign tweet_hashtags = tweet_hashtags | push: "Flask" %}
+{% endif %}
+{% capture tweet_hashtags_output %}&hashtags={{ tweet_hashtags | array_to_sentence_string: "," | remove: " " }}{% endcapture %}
+-->
+
+<a class="{% if include.text_label %}share-btn{% endif %} share-btn-twitter" rel="noopener"
+    href="https://twitter.com/intent/tweet?url={{ share_url }}&text={{ title | append: tweet_by | url_encode }}{{ tweet_hashtags_output }}" target="_blank">
+    <i class="fa fa-twitter"></i>
+</a>
+<a class="{% if include.text_label %}share-btn{% endif %} share-btn-facebook" rel="noopener"
+    href="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}&title={{ title | url_encode }}" target="_blank">
+    <i class="fa fa-facebook"></i>
+
+</a>
+<a class="{% if include.text_label %}share-btn{% endif %} share-btn-linkedin" rel="noopener"
+    href="http://www.linkedin.com/shareArticle?mini=true&url={{ share_url }}&title={{ title | url_encode }}" target="_blank">
+    <i class="fa fa-linkedin"></i>
+</a>
