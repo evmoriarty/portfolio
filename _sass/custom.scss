@@ -49,6 +49,87 @@ $on-laptop:			800px !default;
 
 
 /********************/
+/***  About Page ****/
+/********************/
+
+.about-page {
+  width: 55%;
+  margin: auto;
+  margin-top: 30px;
+
+  .about-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+
+    .about-pic {
+      height: 500px;
+      width: auto;
+      border-radius: 3px;
+    }
+
+    .about-top-text {
+      margin-top: 70px;
+      max-width: 375px;
+    }
+  }
+}
+
+@include media-query(1600px) {
+  .about-page {
+    width: 65%;
+  }
+}
+
+@include media-query(1385px) {
+  .about-page {
+    width: 75%;
+  }
+}
+
+@include media-query(1000px) {
+  .about-page {
+    width: 100%;
+  }
+}
+
+@include media-query($on-laptop) {
+  .about-page {
+    width: 100%;
+
+    .about-top {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0px;
+
+      .about-top-pic {
+        margin-bottom: 1.75em;
+      }
+      
+      .about-top-text {
+        margin-top: 0px;
+        max-width: none;
+      }
+    }
+  }
+}
+
+@include media-query($on-phone) {
+  .about-page {
+    .about-top {
+      .about-top-pic {
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+    }
+  }
+}
+
+
+/********************/
 /***  Blog List  ****/
 /********************/
 
