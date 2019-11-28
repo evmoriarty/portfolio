@@ -3,7 +3,7 @@
 <!-- Puts my twitter username -->
 {% capture tweet_by %} by @{{ site.minima.social_links.twitter }}{% endcapture %}
 <!-- Encodes link url -->
-{% assign share_url = site.url | append: page.url | url_encode %}
+<!-- {% assign share_url = site.url | append: page.url %} -->
 <!-- Creates a hashtag array -->
 <!--
 {% assign tweet_hashtags = "" | split: "," %}
@@ -20,15 +20,15 @@
 -->
 
 <a class="{% if include.text_label %}share-btn{% endif %} share-btn-twitter" rel="noopener"
-    href="https://twitter.com/intent/tweet?url={{ share_url }}&text={{ title | append: tweet_by | url_encode }}{{ tweet_hashtags_output }}" target="_blank">
+    href="https://twitter.com/intent/tweet?url={{ site.url | append: page.url }}&text={{ title | append: tweet_by | url_encode }}{{ tweet_hashtags_output }}" target="_blank">
     <i class="fa fa-twitter"></i>
 </a>
 <a class="{% if include.text_label %}share-btn{% endif %} share-btn-facebook" rel="noopener"
-    href="https://www.facebook.com/sharer/sharer.php?u={{ share_url }}&title={{ title | url_encode }}" target="_blank">
+    href="https://www.facebook.com/sharer/sharer.php?u={{ site.url | append: page.url }}&title={{ title | url_encode }}" target="_blank">
     <i class="fa fa-facebook"></i>
 
 </a>
 <a class="{% if include.text_label %}share-btn{% endif %} share-btn-linkedin" rel="noopener"
-    href="http://www.linkedin.com/shareArticle?mini=true&url={{ share_url }}&title={{ title | url_encode }}" target="_blank">
+    href="http://www.linkedin.com/shareArticle?mini=true&url={{ site.url | append: page.url }}&title={{ title | url_encode }}" target="_blank">
     <i class="fa fa-linkedin"></i>
 </a>
