@@ -183,6 +183,9 @@ a {
 .d-flex-direction {
   display: flex;
   flex-direction: column; }
+.d-flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse; }
 
 .d-flex-center {
   display: flex;
@@ -217,8 +220,13 @@ hr {
   text-transform: uppercase;
   cursor: pointer;
   bottom: 93%;
+  left: 87%;
   padding-left: 10px;
-  z-index: 99; }
+  z-index: 99; 
+  transition: 0.1s; }
+
+.showcase_close-btn:hover {
+  opacity: 0.3; }
 
 .showcase_close-btn p {
   font-size: 20px; }
@@ -234,7 +242,7 @@ hr {
   background-color: white;
   overflow-x: hidden;
   transition: 0.7s;
-  padding-top: 60px; }
+  padding-top: 20px; }
 
 .sidenav-links {
   display: flex;
@@ -251,26 +259,29 @@ hr {
   text-decoration: none;
   font-size: 25px;
   color: black;
-  display: block; }
+  display: block;
+  transition: 0.1s; }
 
 .sidenav a:hover {
-  color: #999999; }
+  opacity: 0.3; }
 
 .sidenav .closebtn {
-  display: flex;
-  position: absolute;
   top: 0;
   padding: 10px 0 0 0; }
 
-.sidenav .closebtn .closebtn-img {
+.sidenav .close-btn .close-btn-img {
   width: 25px;
-  transition: 0.3s; }
+  transition: 0.1s; }
 
-.sidenav .closebtn .closebtn-img:hover {
-  opacity: 0.3; }
+.sidenav .close-btn .close-btn-img:hover {
+  opacity: 1; }
 
 .sidenavMenu {
-  transform: rotate(180deg); }
+  padding: 2px;
+  /*transition: 0.3s;*/ }
+
+/* .sidenavMenu:hover {
+  transform: rotate(180deg); } */
 
 /******* Header *******/
 header {
@@ -406,7 +417,7 @@ footer .links a::after,
   -webkit-transition: width 0.4s ease; }
 
   #coffee-emoji {
-    font-size: 25px; }
+    font-size: 30px; }
 
 /******* Works Showcase ********/
 .works-image-main img,

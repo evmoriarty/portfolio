@@ -8,7 +8,9 @@
     <div class="g-container">
         <div id="sideNav" class="sidenav">
             <div class="g-container">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="/assets/close.svg" class="closebtn-img" alt="close_btn"></a>
+                <div class="close-btn d-flex-row-reverse">
+                    <a href="javascript:void(0)" onclick="closeNav()"><img src="/assets/close.svg" class="close-btn-img" alt="Close"></a>
+                </div>
                 <div class="sidenav-links">
                     <a href="/"><h4>Home</h4></a>
 					<a href="./about/"><h4>About</h4></a>
@@ -19,8 +21,10 @@
 
 
         <div id="main-content">
-            <nav class="d-flex padding-tb-25">
-                <a href="#" onclick="openNav()"><img class="sidenavMenu" src="/assets/circuit_menu.svg" alt="circuit_menu"></a>
+            <nav class="d-flex-row-reverse padding-tb-25">
+                <div class="sidenavMenu">
+                    <a href="#" onclick="openNav()"><img src="/assets/circuit_menu.svg" alt="circuit_menu"></a>
+                </div>
             </nav>
 
             <header>
