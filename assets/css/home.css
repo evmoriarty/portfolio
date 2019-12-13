@@ -405,6 +405,9 @@ footer .links a::after,
   transition: width 0.4s ease;
   -webkit-transition: width 0.4s ease; }
 
+  #coffee-emoji {
+    font-size: 25px; }
+
 /******* Works Showcase ********/
 .works-image-main img,
 .works-image-sub img {
@@ -516,7 +519,6 @@ hr {
 
   .works-showcase .title-desc,
   .works-showcase .details {
-    margin: 0;
     width: 100%; }
 
   .works-showcase .details {
@@ -554,6 +556,16 @@ hr {
     object-fit: contain;
     margin: 50px 0px 0px 0px; }
 
+  .works-showcase .d-flex {
+    justify-content: space-between; }
+
+  .works-showcase .title-desc {
+    width: 65%; }
+
+  .works-showcase .title-desc,
+  .works-showcase .details {
+    margin: 0; }
+
   .works-showcase-end a {
     background-color: black;
     color: white; }
@@ -565,7 +577,7 @@ hr {
     flex-direction: column;
     align-items: center; }
 
-  #row-100 {
+  #home-landing-img-big {
     padding: 0; }
 
   .land-imgs .landing-image {
