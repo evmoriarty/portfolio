@@ -220,8 +220,7 @@ hr {
   text-transform: uppercase;
   cursor: pointer;
   bottom: 93%;
-  left: 87%;
-  padding-left: 10px;
+  right: 7.5%;
   z-index: 99; 
   transition: 0.1s; }
 
