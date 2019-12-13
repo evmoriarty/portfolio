@@ -33,17 +33,17 @@
                 </div>
             </header>
 
-            <section class="d-flex land-imgs padding-t-25" id="row-50">
-                <div class="landing-image w-50 margin-lr-25">
+            <section class="d-flex land-imgs padding-t-25">
+                <div class="landing-image w-50 margin-lr-25" data-aos="fade-up-right">
                     <img src="/assets/northlich.png" alt="northlich_webpage" id="northlich" class="w-100 obj-cover">
                 </div>
-                <div class="landing-image w-50 margin-lr-25">
+                <div class="landing-image w-50 margin-lr-25" data-aos="fade-up-left">
                     <img src="/assets/engelandmartin.png" alt="engel-and-martin_webpage" id="engelandmartin" class="w-100 obj-cover">
                 </div>
             </section>
 
-            <section class="d-flex land-imgs padding-t-50" id="row-100">
-                <div class="landing-image w-100 margin-lr-25">
+            <section class="d-flex land-imgs padding-t-50" id="home-landing-img-big">
+                <div class="landing-image w-100 margin-lr-25" data-aos="fade-up">
                     <img src="/assets/cyber@uc.png" alt="cyberatuc_webpage" id="cyberatuc" class="w-100 obj-contain">
                 </div>
             </section>
@@ -62,7 +62,7 @@
                         </ul>
                     </div>
                     <div class="copyright">
-                        <p class="text-center padding-tb-25">Coded with 🖤 by Evan Pringle</p>
+                        <p class="text-center padding-tb-25">Coded with <a href="https://www.buymeacoffee.com/sprinfo" target="_blank" title="Buy me more coffee?"><span id="coffee-emoji">☕</span></a> by Evan Pringle</p>
                     </div>
                 </div>
             </footer>
@@ -74,8 +74,15 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
-    <!-- Scroll Reveal -->
-    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <!-- Animate on Scroll Init -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 800,
+            once: true
+        });
+    </script>
     <!-- Custom JS -->
     <script src="/assets/js/script.js"></script>
     <script>

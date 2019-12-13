@@ -13,11 +13,11 @@
 			<a href="/"><p>Close</p></a>
 		</div>
 
-		<section class="works-image-main padding-t-100">
+		<section class="works-image-main padding-t-100" data-aos="fade-up">
 			<img src="/assets/engelandmartin-main.png" alt="northlich_page" class="obj-contain bg-color-engl">
 		</section>
 
-		<section class="works-showcase padding-t-100">
+		<section class="works-showcase padding-t-100" data-aos="fade-up">
 			<div class="container d-flex">
 				<div class="title-desc w-50 margin-lr-50">
 					<h4>Engel & Martin, LLC.</h4>
@@ -39,15 +39,15 @@
 	</div>
 
 	<div class="container-100">
-		<section class="works-image-sub padding-t-100">
+		<section class="works-image-sub padding-t-100" data-aos="fade-up">
 			<img class="obj-contain bg-color-engl-2" src="/assets/engelandmartin_mobile.png" alt="engelandmartin_mobile">
 		</section>
 	</div>
 
 	<div class="g-container">
 		<section class="works-image-more padding-t-50 d-flex">
-			<img class="w-50 margin-lr-25 obj-contain bg-color-engl" src="/assets/engelandmartin_attourneys.png" alt="engelandmartin_attourneys">
-			<img class="w-50 margin-lr-25 obj-contain bg-color-engl" src="/assets/engelandmartin_news.png" alt="engelandmartin_news">
+			<img class="w-50 margin-lr-25 obj-contain bg-color-engl" src="/assets/engelandmartin_attourneys.png" alt="engelandmartin_attourneys" data-aos="fade-up">
+			<img class="w-50 margin-lr-25 obj-contain bg-color-engl" src="/assets/engelandmartin_news.png" alt="engelandmartin_news" data-aos="fade-up">
 		</section>
 	</div>
 
@@ -63,8 +63,15 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 	crossorigin="anonymous"></script>
-	<!-- Scroll Reveal -->
-	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+	<!-- Animate on Scroll Init -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			offset: 200,
+			duration: 800,
+			once: true
+		});
+	</script>
 	<script src="/assets/js/script.js"></script>
 
 </body>
