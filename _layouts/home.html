@@ -6,78 +6,86 @@
 <body>
 
     <div class="g-container">
-        <div id="sideNav" class="sidenav">
+        <div id="overlay" class="overlay">
             <div class="g-container">
-                <div class="close-btn d-flex-row-reverse">
+                <!-- <div class="close-btn d-flex-row-reverse">
                     <a href="javascript:void(0)" onclick="closeNav()"><img src="/assets/close.svg" class="close-btn-img" alt="Close"></a>
-                </div>
-                <div class="sidenav-links">
-                    <a href="/"><h4>Home</h4></a>
-					<a href="./about/"><h4>About</h4></a>
-					<a href="./blog/"><h4>Blog</h4></a>
-                </div>
+                </div> -->
+                <h4 class="nav-title">Navigation</h4>
+                <nav class="overlay-menu">
+                    <ul>
+                        <li><a href="/"><h4>Home</h4></a></li>
+                        <li><a href="./about/"><h4>About</h4></a></li>
+                        <li><a href="./blog/"><h4>Blog</h4></a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
 
 
-        <div id="main-content">
-            <nav class="d-flex-row-reverse padding-tb-25">
-                <div class="sidenavMenu">
-                    <a href="#" onclick="openNav()"><img src="/assets/circuit_menu.svg" alt="circuit_menu"></a>
-                </div>
-            </nav>
+        <nav class="d-flex-row-reverse padding-tb-25">
+            <div class="overlay-menu">
+                <!-- <a href="#" onclick="openNav()"><img src="/assets/circuit_menu.svg" alt="circuit_menu"></a> -->
+                <a id="hamburger-icon" class="open-menu">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+                </a>
+            </div>
+        </nav>
 
-            <header>
-                <div class="text">
-                    <h4>EVAN PRINGLE <span>&middot; Cincinnati</span></h4>
-                    <h5>A self-taught Full Stack Web Developer with a passion to make the internet fascinating.</h5>
-                </div>
-                <div class="image">
-                    <img src="/assets/circuit_tree.png" alt="circuit_tree">
-                </div>
-            </header>
+        <header>
+            <div class="text">
+                <h4>EVAN PRINGLE <span>&middot; Cincinnati</span></h4>
+                <h5>A self-taught Full Stack Developer with a passion to make the internet fascinating.</h5>
+            </div>
+            <div class="image">
+                <img src="/assets/circuit_tree.png" alt="circuit_tree">
+            </div>
+        </header>
 
-            <section class="d-flex land-imgs padding-t-25">
-                <div class="landing-image w-50 margin-lr-25" data-aos="fade-up-right">
-                    <img src="/assets/northlich.png" alt="northlich_webpage" id="northlich" class="w-100 obj-cover">
-                </div>
-                <div class="landing-image w-50 margin-lr-25" data-aos="fade-up-left">
-                    <img src="/assets/engelandmartin.png" alt="engel-and-martin_webpage" id="engelandmartin" class="w-100 obj-cover">
-                </div>
-            </section>
+        <section class="d-flex land-imgs padding-t-25">
+            <div class="landing-image w-50 margin-lr-25" data-aos="fade-up-right">
+                <img src="/assets/northlich.png" alt="northlich_webpage" id="northlich" class="w-100 obj-cover">
+            </div>
+            <div class="landing-image w-50 margin-lr-25" data-aos="fade-up-left">
+                <img src="/assets/engelandmartin.png" alt="engel-and-martin_webpage" id="engelandmartin" class="w-100 obj-cover">
+            </div>
+        </section>
 
-            <section class="d-flex land-imgs padding-t-50" id="home-landing-img-big">
-                <div class="landing-image w-100 margin-lr-25" data-aos="fade-up">
-                    <img src="/assets/cyber@uc.png" alt="cyberatuc_webpage" id="cyberatuc" class="w-100 obj-contain">
-                </div>
-            </section>
+        <section class="d-flex land-imgs padding-t-50" id="home-landing-img-big">
+            <div class="landing-image w-100 margin-lr-25" data-aos="fade-up">
+                <img src="/assets/cyber@uc.png" alt="cyberatuc_webpage" id="cyberatuc" class="w-100 obj-contain">
+            </div>
+        </section>
 
-            <footer class="padding-t-100">
-                <div class="container">
-                    <div class="contact">
-                        <h5 class="contact-container">Want to get in <a href="mailto:epringle365@vivaldi.net">touch</a>?</h5>
-                    </div>
-                    <div class="links">
-                        <ul class="list">
-                            <li><a href="https://github.com/SrgSprinkles/" target="_blank"><p>GitHub</p></a></li>
-                            <li><a href="https://linkedin.com/in/evan-pringle/" target="_blank"><p>LinkedIn</p></a></li>
-                            <li><a href="https://twitter.com/epringle365" target="_blank"><p>Twitter</p></a></li>
-                            <li><a href="https://instagram.com/epringle365" target="_blank"><p>Instagram</p></a></li>
-                        </ul>
-                    </div>
-                    <div class="copyright">
-                        <p class="text-center padding-tb-25">Coded with <a href="https://www.buymeacoffee.com/sprinfo" target="_blank" title="Buy me more coffee?"><span id="coffee-emoji">☕</span></a> by Evan Pringle</p>
-                    </div>
+        <footer class="padding-t-100">
+            <div class="container">
+                <div class="contact">
+                    <h5 class="contact-container">Want to get in <a href="mailto:epringle365@vivaldi.net">touch</a>?</h5>
                 </div>
-            </footer>
-        </div>
+                <div class="links">
+                    <ul class="list">
+                        <li><a href="https://github.com/SrgSprinkles/" target="_blank"><p>GitHub</p></a></li>
+                        <li><a href="https://linkedin.com/in/evan-pringle/" target="_blank"><p>LinkedIn</p></a></li>
+                        <li><a href="https://twitter.com/epringle365" target="_blank"><p>Twitter</p></a></li>
+                        <li><a href="https://instagram.com/epringle365" target="_blank"><p>Instagram</p></a></li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <p class="text-center padding-tb-25">Coded with <a href="https://www.buymeacoffee.com/sprinfo" target="_blank" title="Buy me more coffee?"><span id="coffee-emoji">☕</span></a> by Evan Pringle</p>
+                </div>
+            </div>
+        </footer>
     </div>
 
 
     <!-- jQuery v3.3.1 -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="/assets/js/script.js"></script>
+
     <!-- Animate on Scroll Init -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -87,8 +95,6 @@
             once: true
         });
     </script>
-    <!-- Custom JS -->
-    <script src="/assets/js/script.js"></script>
     <script>
         /* Check the initial screen size */
         $(document).ready(function() {
