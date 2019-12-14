@@ -515,10 +515,6 @@ footer .links a::after,
     animation: coffeeBounce 1s ease forwards;
     animation-iteration-count: infinite; }
 
-  /* #coffee-emoji:hover {
-    transform: translateY(30px);
-  } */
-
   @keyframes coffeeBounce {
     0% {
       transform: translateY(0%); }
@@ -527,6 +523,7 @@ footer .links a::after,
     100% {
       transform: translateY(0%); }
   }
+
 
 /******* Works Showcase ********/
 .works-image-main img,
@@ -621,6 +618,7 @@ hr {
   position: initial;
   z-index: -1; }
 
+
 /******* Media Queries *******/
 /* XS Devices */
 @media only screen and (max-width: 576px) {
@@ -637,8 +635,8 @@ hr {
   .works-showcase p {
     font-size: 14px; }
 
-  .works-showcase .title-desc,
-  .works-showcase .details {
+  .g-container .works-showcase .title-desc,
+  .g-container .works-showcase .details {
     width: 100%; }
 
   .works-showcase .details {
@@ -660,6 +658,7 @@ hr {
     font-size: 34px;
     font-weight: 400;
     letter-spacing: 1.25px; } }
+
 /* Small Devices */
 @media only screen and (max-width: 768px) {
   .works-image-main img,
@@ -709,6 +708,7 @@ hr {
 
   footer {
     padding: 0px 0px 50px 0px; } }
+
 /* Medium Devices */
 @media only screen and (max-width: 992px) {
   header .text {
@@ -727,6 +727,7 @@ hr {
 
   .land-imgs .landing-image img {
     height: 250px; } }
+
 /* Large Devices */
 @media only screen and (max-width: 1200px) {
   header img {
