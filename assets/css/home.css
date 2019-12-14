@@ -10,8 +10,9 @@
   background: transparent; }
 
 html {
-  font-family: 'Encode Sans Condensed', sans-serif;
-  font-weight: 300; }
+  font-family: 'Encode Sans Condensed', Helvetica, sans-serif;
+  font-weight: 300;
+  font-display: swap; }
 
 body {
   overflow-x: hidden;
@@ -250,14 +251,14 @@ hr {
   height: 100%; }
 
 .overlay.open li {
-  animation: fadeInRight .5s ease forwards;
-  animation-delay: .35s; }
+  animation: fadeInRight 0.5s ease forwards;
+  animation-delay: 0.2s; }
 .overlay.open li:nth-of-type(2) {
-  animation-delay: .4s; }
+  animation-delay: 0.25s; }
 .overlay.open li:nth-of-type(3) {
-  animation-delay: .45s; }
+  animation-delay: 0.3s; }
 .overlay.open li:nth-of-type(4) {
-  animation-delay: .50s; }
+  animation-delay: 0.35s; }
  
 @keyframes fadeInRight {
   0% {
@@ -507,7 +508,25 @@ footer .links a::after,
   -webkit-transition: width 0.4s ease; }
 
   #coffee-emoji {
+    display: inline-block;
     font-size: 30px; }
+
+  #coffee-emoji:hover {
+    animation: coffeeBounce 1s ease forwards;
+    animation-iteration-count: infinite; }
+
+  /* #coffee-emoji:hover {
+    transform: translateY(30px);
+  } */
+
+  @keyframes coffeeBounce {
+    0% {
+      transform: translateY(0%); }
+    50% {
+      transform: translateY(-4px); }
+    100% {
+      transform: translateY(0%); }
+  }
 
 /******* Works Showcase ********/
 .works-image-main img,
