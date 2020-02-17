@@ -60,7 +60,6 @@ $on-laptop:			800px !default;
   .about-top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 25px;
 
     .about-pic {
       height: 500px;
@@ -69,7 +68,6 @@ $on-laptop:			800px !default;
     }
 
     .about-top-text {
-      margin-top: 70px;
       max-width: 375px;
     }
   }
