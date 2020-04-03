@@ -1,11 +1,11 @@
-title: The Pringle Blog
-author: Evan Pringle
+title: Evan Moriarty
+author: Evan Moriarty
 email: epringle365@vivaldi.net
 description: > # this means to ignore newlines until "show_exerpts:"
-  A self-taught Full Stack Web Developer with a passion to make the internet fascinating.
+  Evan Moriarty - A self-taught web developer with a passion to make the internet fascinating
 
 show_excerpts: false # set to true to show excerpts on the homepage
-url: https://pringled.com
+url: https://evanmoriarty.com/
 minima:
   # Minima date format
   # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
