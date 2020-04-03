@@ -1,3 +1,4 @@
 ---
 layout: northlich
+title: Northlich
 ---
