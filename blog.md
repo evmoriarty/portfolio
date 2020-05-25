@@ -4,12 +4,10 @@ title: Blog
 permalink: /blog/
 ---
 
-<!-- <h1 class="post-title title-spacing">Latest Posts</h1> -->
-
-<section class="blogs">
+<div class="row row-cols-3" style="padding-top: 25px">
 
   {% for post in site.posts %}
-    <section class="blog">
+    <section class="blog col">
       <a href="{{ post.url }}"><img src="{{ post.background-image }}"></a>
       <h2 class="custom-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <!-- <p>{{ post.excerpt }}</p> -->
@@ -34,4 +32,4 @@ permalink: /blog/
     </section>
   {% endfor %}
 
-</section>
+</div>
