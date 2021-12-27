@@ -9,6 +9,9 @@ gemspec
 # Windows support
 gem 'wdm', '>= 0.1.0'
 
+# Markdown support
+gem "kramdown-parser-gfm"
+
 # Plugins, add more if you want
 group :jekyll_plugins do
   gem 'jekyll-sitemap'
