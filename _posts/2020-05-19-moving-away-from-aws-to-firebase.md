@@ -2,8 +2,8 @@
 title: Moving Away From AWS To Firebase
 layout: blog
 categories: Tech
-background-image: https://firebase.google.com/images/social.png
-published: true
+background-image: /assets/blog/moving-away-from-aws-to-firebase.jpg
+published: false
 ---
 
 ## AWS is complicated

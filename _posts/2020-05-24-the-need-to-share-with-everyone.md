@@ -2,7 +2,7 @@
 title: The Need To Share With Everyone
 layout: blog
 categories: Personal
-background-image: ''
+background-image: /assets/blog/the-need-to-share-with-everyone.jpg
 published: true
 ---
 
