@@ -11,13 +11,13 @@ order: 2
             <img class="about-pic" src="/assets/evan-pic.jpg">
         </div>
         <div class="about-top-text">
-            <h2>I'm Evan</h2>
-            <p>A self-taught Full Stack Web Developer and one of the founders and web master of Cyber@UC, the University of Cincinnati’s official <a href="https://www.owasp.org/">OWASP</a> chapter.</p> 
-            <p>I've been invested ever since I found out about web development. The way my interest started was during an internship, and I was told there was going to be a lack of work for the next couple of weeks. This meant that I wouldn't be able to work or do anything. For the first couple of days I endured the boredom, but after awhile I got restless. I personally don't like sitting there and not learning something, so I decided to give web development a try!</p>
+            <h2>Hi there, I'm Evan</h2>
+            <p>I have a B.S. in Computer Engineering along with a minor in Computer Science. I'm a self-taught Full Stack Web Developer and one of the founders and previous web master of <a href="https://cyberatuc.org">Cyber@UC</a>.</p>
+            <p>I've been invested ever since I discovered web dev. My interest was piqued during an internship when I was told there wasn't going to be future work for some time. The first couple of days I tried to find something to do but that ran dry. After awhile I got restless because I don't like wasting my time, so I decided to dive in to the world of web dev.</p>
         </div>
     </div>
     <div class="about-bottom">
-        <p>I was learning about web development in my freetime while I was in college. This was a passion for me, and I couldn't stop. All of this learning eventually led up to my first job as a web dev. I really struggled during the interview. They were not sure I could handle working there, but the company gave me a shot and offered me the job. Ever since then, I have had multiple jobs that related to web dev, and I try to continuously expand my knowledge. </p>
+        <p>During my free time in college, I deepened my web dev knowledge. This was a growing passion for me and I couldn't stop. All of my time spent eventually opened a door to a web dev job. I struggled during the interview because I didn't have real world experience. They weren't sure I could handle the work, but the company gave me a shot and offered me the job. Ever since then, I've had multiple web dev jobs and I continuously expand my knowledge to this day.</p>
         <p>If you find my work or my story interesting, feel free to contact me about anything: coffee, jobs, or simply to chat at <a href="mailto:epringle365@vivaldi.net">epringle365@vivaldi.net</a>.</p>
     </div>
 </section>
