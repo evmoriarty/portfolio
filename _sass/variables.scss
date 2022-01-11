@@ -1,0 +1,27 @@
+$bg-dark-color: #121212;
+$font-light-color: #F3F3F3;
+$font-muted-color: #878A8F;
+
+/* ---- Custom Bootstrap Overwrites ---- */
+$font-family-sans-serif:
+  "Proxima Nova",
+  // Android
+  Roboto,
+  // Basic web fallback
+  "Helvetica Neue", Arial,
+  // Linux
+  "Noto Sans",
+  "Liberation Sans",
+  // Sans serif fallback
+  sans-serif,
+  // Emoji fonts
+  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+$h1-font-size: 6rem;
+$h2-font-size: 3.75rem;
+$h3-font-size: 3rem;
+$h4-font-size: 2.125rem;
+$h5-font-size: 1.5rem;
+$h6-font-size: 1.25rem;
+
+$bg-color-dark: #212121;

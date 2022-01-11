@@ -1,19 +1,13 @@
 $(document).ready(function () {
-	$('#hamburger-icon').click(function () {
-		$(this).toggleClass('active');
+	// Executes when HTML-Document is loaded and DOM is ready
 
-		var hamburgerClass = $(this).attr("class");
-
-		if (hamburgerClass.search("close-menu") == -1) {
-			$('.overlay').toggleClass('open');
-			$('body').css('overflow-y', 'hidden');
-			$(this).toggleClass('close-menu');
-			$(this).toggleClass('open-menu');
+	$(".navbar-toggler").click(function() {
+		if ( !$(".navbar-toggler").hasClass("collapsed") ) {
+			$(".navbar").addClass("navbar-border-dark");
+			// $(".navbar").css({ "background-color": "#212121", "border-color": "rgba(255, 255, 255, 0.1)!important"});
 		} else {
-			$('.overlay').toggleClass('open');
-			$('body').css('overflow-y', 'auto');
-			$(this).toggleClass('close-menu');
-			$(this).toggleClass('open-menu');
+			$(".navbar").removeClass("navbar-border-dark");
+			// $(".navbar").css({"background-color": "", "border-color": ""});
 		}
 	});
 });

@@ -1,0 +1,87 @@
+/* ---- Landing Header ---- */
+
+$landing-hr-bg-color: #BABABA;
+
+.landing-header {
+    height: 100vh;
+    background-color: #212121;
+}
+
+.landing-header hr {
+    height: 16px;
+    border-radius: 10px;
+    background-color: $landing-hr-bg-color;
+}
+
+// TODO: Figure out how to loop through the children
+// .landing-header hr:nth-child(1) {
+//     opacity: 10%;
+// }
+
+#author-name {
+    line-height: normal;
+    letter-spacing: 3px;
+}
+
+
+/* ---- Quick Articles ---- */
+/* TODO: Figure out how to dim the images in the quick article section
+.quick-latest-post::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: black;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+}
+*/
+
+// #container-latest-post {
+//     height: 100vh;
+// }
+
+.article-card {
+    // background-color: none?;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+}
+
+.article-card .article-card-img {
+    width: 100%;
+}
+
+.article-card .article-card-img-wrapper::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent 0%, #0F141E 175%);
+}
+
+.quick-latest-post {
+    background-size: cover;
+    height: 100%;
+}
+
+#quick-article-header {
+    letter-spacing: 3px;
+}
+
+.quick-latest-post-details {
+    padding-top: 14rem;
+    padding-bottom: 17rem;
+}
+
+
+@include media-breakpoint-down(lg) {
+    .most-recent-later-posts .recent-later-post-overlay {
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}

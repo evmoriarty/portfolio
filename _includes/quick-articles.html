@@ -1,0 +1,52 @@
+<div class="quick-articles">
+    <div class="container-fluid">
+
+        <div class="row" id="container-latest-post">
+            <div class="col-12 p-0">
+
+                {% assign recent_post = site.posts.first %}
+                <a class="text-decoration-none" href="{{ recent_post.url }}" title="{{ recent_post.title }}">
+                    <div class="article-card bg-dark font-light-color">
+                        <div class="article-card-img-wrapper">
+                            <img src="{{ recent_post.background-image }}" class="article-card-img" alt="...">
+                        </div>
+                        <div class="position-absolute w-100 h-100 d-flex flex-column justify-content-center container-fluid">
+                            <h6 class="text-center font-light-color pt-sm-5" id="quick-article-header">ARTICLES</h6>
+                            <h2 class="text-center fw-bold font-light-color pt-sm-5 pb-sm-2">{{ recent_post.title }}</h2>
+                            <h5 class="text-center font-light-color d-none d-sm-block">{{ recent_post.content | strip_html | truncatewords:40 }}</h5>
+                        </div>
+                    </div>
+                    <!-- <div class="quick-latest-post" style="background-image: url({{ recent_post.background-image }});">
+                        <div class="container">
+
+                            <h6 class="text-center font-light-color pt-5" id="quick-article-header">ARTICLES</h6>
+                            <div class="quick-latest-post-details">
+                                <h2 class="text-center fw-bold font-light-color py-5">{{ recent_post.title }}</h2>
+                                <h5 class="font-light-color">{{ recent_post.content | strip_html | truncatewords:40 }}</h5>
+                            </div>
+
+                        </div> -->
+                </a>
+
+            </div>
+        </div>
+
+        <div class="row">
+            {% for post in site.posts offset:1 limit:3 %}
+                <div class="col-lg-4 col-12 p-0 flex-column">
+                    <a class="text-decoration-none" href="{{ post.url }}" title="{{ post.title }}">
+                        <div class="most-recent-later-posts article-card bg-dark font-light-color">
+                            <div class="article-card-img-wrapper">
+                                <img src="{{ post.background-image }}" class="article-card-img" alt="..." />
+                            </div>
+                            <div class="recent-later-post-overlay position-absolute w-100 h-100 d-flex align-items-end">
+                                <h2 class="fw-bold font-light-color ps-2">{{ post.title }}</h2>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>

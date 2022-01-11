@@ -2,6 +2,7 @@
 layout: blogs-list
 title: Blog
 permalink: /blog/
+order: 3
 ---
 
 <div class="row row-cols-3" style="padding-top: 25px">

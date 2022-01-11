@@ -7,76 +7,43 @@ $on-phone: 			450px !default;
 $on-palm:       600px !default;
 $on-laptop:			800px !default;
 
-*, ::after, ::before {
-  box-sizing: border-box;
+$base-font-size:   1.1rem !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit:     30px !default;
+$blog-line-height: 1.75em;
+$blog-p-margin:    1.75em;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+// Notice the following mixin uses max-width, in a deprecated, desktop-first
+// approach, whereas media queries used elsewhere now use min-width.
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }
+
+// @mixin relative-font-size($ratio) {
+//   font-size: $base-font-size * $ratio;
+// }
 
 /**
  * Wrappers
  */
-.wrapper {
-  width: $content-width;
-  margin: auto;
-}
-
 .post-wrapper {
   width: $blog-content-width;
   margin: auto;
 }
 
-/**
- * General
-*/
-.row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.row-cols-2>* {
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-
-.row-cols-3>* {
-  flex: 0 0 33.333333%;
-  max-width: 33.333333%;
-}
-
-.row-cols-4>* {
-  flex: 0 0 25%;
-  max-width: 25%;
-}
-
-.col {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-/**
-* Site header
-*/
-.site-header {
-  min-height: $spacing-unit * 1.865;
-  line-height: $base-line-height * $base-font-size * 2.75;
-
-  // Positioning context for the mobile navigation icon
-  position: relative;
-}
-
 /********************/
 /****  Home Page ****/
 /********************/
-// header .text {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   width: 100%;
-//   padding: 200px 0px;
-// }
-
-// header .image {
-//   position: absolute;
-// }
 
 
 /********************/

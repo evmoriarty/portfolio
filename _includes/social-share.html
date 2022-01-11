@@ -1,7 +1,7 @@
 <!-- Uses page's title -->
 {% assign title = page.title | default: layout.title %}
 <!-- Puts my twitter username -->
-{% capture tweet_by %} by @{{ site.minima.social_links.twitter }}{% endcapture %}
+{% capture tweet_by %} by @{{ site.data.social-media.twitter.id }}{% endcapture %}
 <!-- Encodes link url -->
 <!-- {% assign share_url = site.url | append: page.url %} -->
 <!-- Creates a hashtag array -->

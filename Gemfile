@@ -3,8 +3,7 @@
 source "https://rubygems.org"
 
 gem 'jekyll'
-
-gemspec
+gem 'bootstrap', '~> 5.1.3'
 
 # Windows support
 gem 'wdm', '>= 0.1.0'
