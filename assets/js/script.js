@@ -1,35 +1,36 @@
-$(document).ready(function () {
-	// Executes when HTML-Document is loaded and DOM is ready
+// TODO: Is any of this stuff needed?
+let onBlogPage = false;
+
+$(document).ready(function() {
+	var currentURL = $(location).attr("href");
+
+	console.log(currentURL);
+
+	if (~currentURL.indexOf('blog')) {
+		console.log("On blog page");
+		// Toggles the navbar from dark to light
+		$('.navbar').toggleClass('navbar-dark navbar-light');
+		onBlogPage = true;
+	}
 
 	$(".navbar-toggler").click(function() {
 		if ( !$(".navbar-toggler").hasClass("collapsed") ) {
-			$(".navbar").addClass("navbar-border-dark");
-			// $(".navbar").css({ "background-color": "#212121", "border-color": "rgba(255, 255, 255, 0.1)!important"});
+
+			if (!onBlogPage) {
+				$(".navbar").addClass("navbar-border-dark");
+			} else {
+				$(".navbar").addClass("bg-light");
+				$(".navbar").addClass("border");
+			}
+
 		} else {
-			$(".navbar").removeClass("navbar-border-dark");
-			// $(".navbar").css({"background-color": "", "border-color": ""});
+			if (!onBlogPage) {
+				$(".navbar").removeClass("navbar-border-dark");
+			} else {
+				$(".navbar").removeClass("bg-light");
+				$(".navbar").removeClass("border");
+			}
 		}
+
 	});
-});
-
-$('footer a, .site-link a, .hover-off').hover(
-	function() {
-		$(this).removeClass('hover-off');
-		$(this).addClass('hover-on');
-	}, function() {
-		$(this).removeClass('hover-on');
-		$(this).addClass('hover-off');
-	}
-);
-
-$('#northlich').click(function() {
-	location.href="./northlich.html";
-});
-
-$('#engelandmartin').click(function() {
-	location.href="/engelandmartin.html";
-});
-
-$('#cyberatuc').click(function() {
-	location.href="./cyberatuc.html";
 });
