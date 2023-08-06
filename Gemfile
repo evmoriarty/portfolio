@@ -4,8 +4,6 @@ source "https://rubygems.org"
 
 gem 'jekyll'
 
-gemspec
-
 # Windows support
 gem 'wdm', '>= 0.1.0'
 

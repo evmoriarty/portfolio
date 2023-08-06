@@ -1,41 +1,22 @@
-$(document).ready(function () {
-	$('#hamburger-icon').click(function () {
-		$(this).toggleClass('active');
+// TODO: Is any of this stuff needed?
+let onBlogPage = false;
 
-		var hamburgerClass = $(this).attr("class");
+$(document).ready(function() {
+	var currentURL = $(location).attr("href");
 
-		if (hamburgerClass.search("close-menu") == -1) {
-			$('.overlay').toggleClass('open');
-			$('body').css('overflow-y', 'hidden');
-			$(this).toggleClass('close-menu');
-			$(this).toggleClass('open-menu');
+	if (~currentURL.indexOf('blog')) {
+		// Toggles the navbar from dark to light
+		$('.navbar').toggleClass('navbar-dark navbar-light');
+		onBlogPage = true;
+	}
+
+	$(".navbar-toggler").click(function() {
+		// Toggle the navbar background when opened (mainly on mobile)
+		if (!onBlogPage) {
+			$(".navbar").toggleClass("navbar-border-dark");
 		} else {
-			$('.overlay').toggleClass('open');
-			$('body').css('overflow-y', 'auto');
-			$(this).toggleClass('close-menu');
-			$(this).toggleClass('open-menu');
+			$(".navbar").toggleClass("bg-light");
+			$(".navbar").toggleClass("border");
 		}
 	});
-});
-
-$('footer a, .site-link a, .hover-off').hover(
-	function() {
-		$(this).removeClass('hover-off');
-		$(this).addClass('hover-on');
-	}, function() {
-		$(this).removeClass('hover-on');
-		$(this).addClass('hover-off');
-	}
-);
-
-$('#northlich').click(function() {
-	location.href="./northlich.html";
-});
-
-$('#engelandmartin').click(function() {
-	location.href="/engelandmartin.html";
-});
-
-$('#cyberatuc').click(function() {
-	location.href="./cyberatuc.html";
 });

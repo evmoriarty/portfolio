@@ -6,22 +6,6 @@ description: > # this means to ignore newlines until "show_exerpts:"
 
 show_excerpts: false # set to true to show excerpts on the homepage
 url: https://evanmoriarty.com/
-minima:
-  # Minima date format
-  # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-  date_format: "%b %-d, %Y"
-
-  # generate social links in footer
-  social_links:
-    email: epringle365@vivaldi.net
-    twitter: evan_eboy
-    github:  SrgSprinkles
-    # rss: rss
-    # dribbble: sprinfo
-    instagram: evan.eboy
-    stackoverflowuser: SrgSprinkles
-    stackoverflowlink: 8493023/srgsprinkles
-    buymeacoffee: sprinfo
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
@@ -30,15 +14,18 @@ header_pages:
  - about.md
  - blog.md
 
+# Blog related
 blogurl: /blog/
-
-# Build settings
-theme: minima
+date_format: "%b %-d, %Y"
 
 # Kramdown is the markdown render
 # - auto_ids generates ids for headers in blog
 kramdown:
   auto_ids: true
+
+sass:
+  load_paths:
+    - _sass
 
 plugins:
   - jekyll-sitemap

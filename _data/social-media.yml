@@ -1,0 +1,41 @@
+email:
+  id: "epringle365@vivaldi.mail.net"
+  href: "mailto:"
+  title: "Email"
+  icon: ""
+
+github:
+  id: "evmoriarty"
+  href: "https://github.com/"
+  title: "evmoriarty"
+  icon: ""
+
+twitter:
+  id: "evan_eboy"
+  href: "https://twitter.com/"
+  title: "evan_eboy"
+  icon: ""
+
+instagram:
+  id: "evan.eboy"
+  href: "https://instagram.com/"
+  title: "evan.eboy"
+  icon: ""
+
+stackoverflow:
+  id: "SrgSprinkles"
+  href: "https://stackoverflow.com/users/8493023/"
+  title: "SrgSprinkles"
+  icon: ""
+
+buymeacoffee:
+  id: "sprinfo"
+  href: "https://buymeacoffee.com/"
+  title: "BuyMeACoffee!"
+  icon: ""
+
+linkedin:
+  id: "evan-moriarty"
+  href: "https://www.linkedin.com/in/"
+  title: "Evan Moriarty"
+  icon: ""

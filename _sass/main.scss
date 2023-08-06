@@ -1,0 +1,100 @@
+@import "variables";
+
+
+/* ---- Globals ---- */
+.font-light-color {
+    color: $font-light-color;
+}
+
+.font-muted {
+    color: $font-muted-color;
+}
+
+.nav-link-muted {
+    color: $font-muted-color !important;
+}
+
+body {
+    font-family: $font-family-sans-serif;
+}
+
+h1 {
+    font-weight: lighter;
+    letter-spacing: -1.5px;
+}
+
+h2 {
+    font-weight: lighter;
+    letter-spacing: -0.5px;
+}
+
+h3 {
+    font-weight: normal;
+    letter-spacing: 0px;
+}
+
+h4 {
+    font-weight: normal;
+    letter-spacing: 0.25px;
+}
+
+h5 {
+    font-weight: normal;
+    letter-spacing: 0px;
+}
+
+h6 {
+    font-weight: normal;
+    font-size: 20px;
+    letter-spacing: 0.15px;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+// TOOD: Add other typography (if needed)
+
+.navbar-border-dark {
+    background-color: $bg-color-dark;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.25rem;
+
+    // adding the animation
+    // animation: fadeIn 1s reverse;
+}
+
+.opacity-85 {
+    opacity: .85 !important;
+}
+
+/* ---- Quick Contact Section ---- */
+.quick-contact {
+    background-color: $bg-dark-color;
+    padding-top: 6rem !important;
+    padding-bottom: 6rem !important;
+}
+
+.quick-contact a:hover {
+    text-decoration: underline!important;
+}
+
+/* ---- Footer Section ---- */
+footer {
+    background-color: $bg-dark-color;
+}
+
+.contact-info a:hover {
+    text-decoration: underline!important;
+    color: $font-light-color;
+}
+
+/*
+Good resource on adding new bootstrap versions (maybe create my own guide?):
+https: //colingallagher.me/2022/01/22/jekyll-bootstrap-5.html#:~:text=Add%20Bootstrap%20to%20the%20Project&text=When%20you've%20downloaded%20the,whole%20folder%20works%20as%20well.&text=Now%20you've%20included%20Bootstrap%20in%20the%20project%20-%20almost%20there!
+*/
+@import "bootstrap-5.3.1/bootstrap.scss";
+@import "home";
+@import "blog";
+@import "about";
+@import "contact";

@@ -1,0 +1,15 @@
+.about-wrapper {
+    background-color: #212121;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.about-wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-wrapper a {
+    text-decoration: underline!important;
+    color: $font-light-color;
+}
