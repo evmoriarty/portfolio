@@ -24,7 +24,8 @@ kramdown:
   auto_ids: true
 
 sass:
-  sass_dir: _sass
+  load_paths:
+    - _sass
 
 plugins:
   - jekyll-sitemap
