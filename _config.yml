@@ -33,3 +33,11 @@ plugins:
   - jekyll-seo-tag
 
 permalink: /blog/:categories/:title:output_ext
+
+# Excludes the following files/folders from being built and placed in production
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - Notes.txt
+  - bin/
