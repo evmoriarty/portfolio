@@ -22,7 +22,7 @@ pushd $PROJECT_PATH
 echo -e "${INFO} Rebuilding site..."
 
 bash ./bin/clean-site.sh
-bash ./bin/build-site.sh
+bash ./bin/build-site-prod.sh
 
 if [[ $? -ne 0 ]]; then
     echo -e "${ERROR} Site build failed, fix errors above and try again"
