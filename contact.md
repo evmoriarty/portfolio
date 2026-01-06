@@ -12,7 +12,7 @@ order: 4
         <div class="col-12">
             <h1 class="fw-bold">Contact me!</h1>
             <h2 class="fw-bold pt-5">I'm available for freelance work.<br>Send me a note if you wanna chat.</h2>
-            <a href="{{ social.email.href }}{{ social.email.id }}" class="font-light-color"><h2 class="fw-bold pt-5">{{ social.email.id }}</h2></a>
+            <a id="email" href="{{ social.email.href }}{{ social.email.id }}" class="font-light-color"><h2 class="fw-bold pt-5">{{ social.email.id }}</h2></a>
         </div>
     </div>
 </div>

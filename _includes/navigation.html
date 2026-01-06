@@ -7,10 +7,17 @@
         <!-- Links start here -->
         <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-lg-0">
-                <li class="nav-item px-3"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
-                <li class="nav-item px-3"><a class="nav-link" href="/about/">About</a></li>
-                <li class="nav-item px-3"><a class="nav-link" href="/blog/">Blog</a></li>
-                <li class="nav-item px-3"><a class="nav-link" href="/contact/">Contact</a></li>
+                <li class="nav-item px-3">
+                    <a class="nav-link {% if page.url == '/' %}active{% endif %}" {% if page.url == '/' %}aria-current="page"{% endif %} href="{{ '/' | relative_url }}">Home</a>
+                <li class="nav-item px-3">
+                    <a class="nav-link {% if page.url == '/about/' %}active{% endif %}" {% if page.url == '/about/' %}aria-current="page"{% endif %} href="{{ '/about/' | relative_url }}">About</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link {% if page.url == '/blog/' or page.collection == 'posts' or page.url contains '/blog' %}active{% endif %}" {% if page.url == '/blog/' or page.collection == 'posts' or page.url contains '/blog' %}aria-current="page"{% endif %} href="{{ '/blog/' | relative_url }}">Blog</a>
+                </li>
+                <li class="nav-item px-3">
+                    <a class="nav-link {% if page.url == '/contact/' %}active{% endif %}" {% if page.url == '/contact/' %}aria-current="page"{% endif %} href="{{ '/contact/' | relative_url }}">Contact</a>
+                </li>
             </ul>
         </div>
     </div>
