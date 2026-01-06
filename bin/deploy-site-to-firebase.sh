@@ -35,7 +35,7 @@ if [[ ! -d ${PROJECT_PATH}/_site/ ]]; then
 fi
 
 # Remove previous artifacts and copy the newly built site
-rm -rf $FIREBASE_DEPLOY_PATH}/*
+rm -rf ${FIREBASE_DEPLOY_PATH}/*
 cp -R ${PROJECT_PATH}/_site/* ${FIREBASE_DEPLOY_PATH}
 
 pushd ${FIREBASE_DEPLOY_PARENT_DIR}
