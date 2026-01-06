@@ -3,3 +3,7 @@ _site/*
 feed.xml
 .jekyll-cache/
 *.swp
+
+# firebase
+.firebase/
+.firebaserc
